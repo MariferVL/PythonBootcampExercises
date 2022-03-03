@@ -1,14 +1,6 @@
 # Control Bodega
 
-# productos= {"Zapatillas": 20,
-#             "Poleras": 10, 
-#             "Zapatos": 15, 
-#             "Poleron": 3, 
-#             "Chaquetas": 5, 
-#             "Guantes": 4}
 # Create a dict as a virtual warehouse with the initial products
-
-
 products= {"prod1":{"Zapatillas": 20},
             "prod2":{"Poleras": 10}, 
             "prod3":{"Zapatos": 15}, 
@@ -32,6 +24,7 @@ def checking_products(x):
     
 checking_products(products)
 
+#Store new products.
 def add_products():
     while True:
         store=productos
@@ -44,14 +37,17 @@ def add_products():
         #     for key in info.keys():
         if add_prod in productos.keys():
             productos[add_prod]=productos[add_prod]+add_units
+            #Update products stock in virtual warehouse.
             print(f'Producto {add_prod} actualizado exitosamente: {add_prod}: {productos[add_prod]} unidades')
         elif add_prod not in productos:        
             productos[add_id][add_prod]=add_units
+            #Update products stock in virtual warehouse.
             print(f'Producto {add_prod} agregado exitosamente: {add_prod}: {add_units} unidades')
         if storage_complete():
             # Takes us out of the function.
             return store 
 
+#Ask to add another product.
 def storage_complete():
     answer = input("Desea agregar otro producto a bodega?: ").capitalize ()
     if answer == "No":
@@ -61,14 +57,14 @@ def storage_complete():
     else:
         print("Respuesta inválida")
 
-#Display and return the available/updated units per product.
+#Display the available/updated units per product.
 def update_warehouse(storage_list):
     print(f'Bodega actualizada con nuevos productos: ' )
     #Go through each value in the data structure (dict), assign the value to a variable, and perform logic on each one individually.
     for product in storage_list:
         print(f"{product}: {storage_list[product]}")
 
-
+#Start the whole program.
 def main():
     store= add_products()
     update_warehouse(store)
@@ -78,7 +74,7 @@ def main():
 if __name__ == "__main__":
     main()
 
-#Display and return an specific product in the store.
+#Display and return an specific product in the store searching by name.
 def specific_product():
     product= input('Ingrese el producto que desea revisar: ').capitalize()
     if product in productos.keys():
