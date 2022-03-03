@@ -1,6 +1,17 @@
 # Comments are in Elementary Learner Mode.
 
+#Rodrigo: Algunos comentarios los redacté en nivel básico para entenderlos y recordarlos. Otros ya son repetidos así que los comprimí.
+
 #Control de Ventas 
+
+#Create a dictionary with products names and IDs.
+productos= {"prod1":"Zapatillas",
+            "prod2":"Poleras", 
+            "prod3":"Zapatos", 
+            "prod4":"Poleron", 
+            "prod5":"Chaquetas", 
+            "prod6":"Guantes",            
+            }
 
 #Create a dictionary with customers names and IDs.
 users={'u1_piloto': 'Jim Sturgess', 'u2_piloto': 'Ryan Gosling',
@@ -14,15 +25,9 @@ users={'u1_piloto': 'Jim Sturgess', 'u2_piloto': 'Ryan Gosling',
 bags={'u1_piloto': {'bag': []}, 'u2_piloto': {'bag': []}, 'u3_piloto': {'bag': []},
         'u4_piloto': {'bag': []}, 'u5_piloto': {'bag': []}, 'u6_piloto': {'bag': []},
         'u7_piloto': {'bag': []}, 'u8_piloto': {'bag': []}, 'u9_piloto': {'bag': []},
-        'u10_piloto': {'bag': []}, 'u11_piloto': {'bag': []}}
+        'u10_piloto': {'bag': []}, 'u11_piloto': {'bag': []}
+        }
 
-productos= {"prod1":{"Zapatillas": 20},
-            "prod2":{"Poleras": 10}, 
-            "prod3":{"Zapatos": 15}, 
-            "prod1":{"Poleron": 3}, 
-            "prod1":{"Chaquetas": 5}, 
-            "prod1":{"Guantes": 4}
-            }
 
 #Display and return number of customers.
 def users_number(x):
