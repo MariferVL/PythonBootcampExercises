@@ -8,6 +8,7 @@ El programa debe reiniciarse cada vez que termina. Sin perder la información an
 preguntando por nombre y contraseña.
 Este loop podrá ser terminado sólo ingresando ‘salir’. Al momento de terminar, el programa debe imprimir 
 en pantalla la variable completa de datos hasta el momento de recibir la instrucción ‘salir’. """
+
 import re
 import time
 
@@ -15,54 +16,64 @@ print("")
 print ('1. Programa para loguear usuarios')
 print("")
 
-# def user_confirmation():
-#     for id in user.keys():
-#         if user_name== id:
-#             print(f'!Bienvenid@ {user[user_name]}!')
-#             print(f'{user[user_name]}, !')
-#         elif user_name not in user.keys():
-#             print("Aún no estás registrad@.Por favor, ingresa a Sing In.")  
-
 users={}
 
 #Identify customer.
 def sign_in():
     while True:
-        user_name= input('Ingrese Nombre de Usuario:  ')
+        user_name= input('Ingrese Nombre de Usuario:  ').capitalize ()
         user_age= int(input('Ingrese su edad: (Sólo dígitos)  '))
         print(f'¡Bienvenid@ {user_name}! Ahora crea tu contraseña.')
         print('Debe contener entre 8 y 11 caracteres incluyendo mayúsculas, minúsculas y números.')
-        # user_password= input('Crear Contraseña:  ')
-        user_password=password_validation()
-        users[user_name]={'password': user_password, 'age': user_age}
-                    
+        print('¡Usuario creado con éxito!')
+        print('')                   
         if continue_or_exit():
             return users
 
+def user_age(age):
+    i=0
+    while i<3:
+        i+=1
+    print('Ingrese su edad')
+    age= int(input('(Sólo dígitos)  '))
+    if age.isdigit()==True:
+        print("Edad ingresada correctamente.")  
+        
+    elif age.isdigit()==False:
+        print("Debes ingresar sólo números.")
+    elif i==3:
+        print("Se acabaron tu número de intentos.")
+        print("Vuelve a registrarte.")
+
 def password_validation():
-    val = True
-    while val == True:
-        for i in range(3):
-            password= input('Crear Contraseña:  ')
-            if len(password) < 8:
-                print('Recuerda que son mínimo 8 caracteres')
-                val = False
-            elif len(password) > 11:
-                print('Recuerda que son máximo 11 caracteres')
-                val = False
-            elif not re.search("[0-9]", password):
-                print('No olvides incluir al menos un número.')
-                val = False
-            elif not re.search("[A-Z]", password):
-                print('No olvides incluir al menos una letra en Mayúscula.')
-                val = False
-            elif not re.search("[a-z]", password):
-                print('No olvides incluir al menos una letra en minúscula.')
-                val = False
-            elif val:
-                return val
-        print('Se agotaron sus intentos.')
-        break
+    val=False
+    i=0
+    while i<4 and val==False:
+        i+=1
+        if i==4:
+            print("Se acabaron tu número de intento.")
+            print("Vuelve a registrarte.")
+            break
+        password= input('Crear Contraseña:  ')
+        if len(password) < 8:
+            print('Recuerda que son mínimo 8 caracteres')
+            val = False
+        if len(password) > 11:
+            print('Recuerda que son máximo 11 caracteres')
+            val = False
+        if not re.search("[0-9]", password):
+            print('No olvides incluir al menos un número.')
+            val = False
+        if not re.search("[A-Z]", password):
+            print('No olvides incluir al menos una letra en Mayúscula.')
+            val = False
+        if not re.search("[a-z]", password):
+            print('No olvides incluir al menos una letra en minúscula.')
+            val = False
+        
+    else:
+        return password, True
+        
 
 def continue_or_exit():
     print("¿Qué desea hacer? Salir/Continuar: ")
@@ -77,12 +88,13 @@ def continue_or_exit():
 
 def updated_users(users_dict):
     print("Los usuarios registrados son:")
-    for user in users_dict:
-        print(user)
+    for user in users_dict.keys():
+        print(user+': \n        contraseña:',users_dict[user]['password']+', edad:', users_dict[user]['age'])
 
 
 def main():
-    users = sign_in()
+    user_name = sign_in()
+    usersuser_name[user_name]={'password': user_password, 'age': user_age}
     updated_users(users)
     print("Programa Finalizado")
 
