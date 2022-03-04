@@ -1,4 +1,4 @@
-# Comments are in Elementary Learner Mode.
+# Comments are in elementary level learner.
 
 #Rodrigo: Algunos comentarios los redacté en nivel básico para entenderlos y recordarlos.
 # Otros ya son repetidos así que los comprimí. También dispuse algunos print como breakpoints 
