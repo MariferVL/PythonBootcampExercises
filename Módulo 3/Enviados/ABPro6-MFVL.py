@@ -21,31 +21,37 @@ users={'u1_piloto': 'Jim Sturgess', 'u2_piloto': 'Ryan Gosling',
         'u9_piloto': 'Jhon Lennon', 'u10_piloto': 'Ed Sheeran', 
         'u11_piloto': 'Franco Scott'}  
 
-#Create an empty list to save customer purchases.
-bags={'u1_piloto': {'bag': []}, 'u2_piloto': {'bag': []}, 'u3_piloto': {'bag': []},
-        'u4_piloto': {'bag': []}, 'u5_piloto': {'bag': []}, 'u6_piloto': {'bag': []},
-        'u7_piloto': {'bag': []}, 'u8_piloto': {'bag': []}, 'u9_piloto': {'bag': []},
-        'u10_piloto': {'bag': []}, 'u11_piloto': {'bag': []}
-        }
+# #Create an empty list to save customer purchases.
+# bags={'u1_piloto': {'bag': []}, 'u2_piloto': {'bag': []}, 'u3_piloto': {'bag': []},
+#         'u4_piloto': {'bag': []}, 'u5_piloto': {'bag': []}, 'u6_piloto': {'bag': []},
+#         'u7_piloto': {'bag': []}, 'u8_piloto': {'bag': []}, 'u9_piloto': {'bag': []},
+#         'u10_piloto': {'bag': []}, 'u11_piloto': {'bag': []}
+#         }
 
+print("")
 print("Comenzando Control de Bodega")
-
+print("")
 #Check available products.
 def checking_products(dict):
+    print('1. Los productos iniciales son: ')
     #Iterate parameter keys.
     for key in dict.keys():
         print(f'Producto:   {key}= {dict[key]} unidades')
 #Call function with specific parameter (global var).                
 checking_products(productos)
 
-#Initiating new program from line 21 to 63.
+print("")
+print ('2. Programa para almacenar nuevos productos')
+print("")
+
+#Initiating new program from line 49 to 98.
 #Step 2: Store new products.
 def add_products():
     while True:
         store=productos
         #Data will be entered by terminal.
         #1st letter will be capitalized. Other option: all to lowercase(.lower()) or uppercase (.upper()).
-        add_prod=input('Ingrese nuevo producto: ').capitalize()
+        add_prod=input(' Ingrese nuevo producto: ').capitalize()
         #Data will be converted to integer. 
         add_units=int(input('Ingrese número de unidades (sólo digitos): '))
         if add_prod in productos.keys():
@@ -76,7 +82,7 @@ def storage_complete():
 
 #Step 4: Display the available/updated units per product.
 def update_warehouse(storage_list):
-    print(f'Bodega actualizada con nuevos productos: ' )
+    print(f'3/4. Bodega actualizada con nuevos productos: ' )
     #Go through each value in the data structure (dict), assign the value to a variable, and perform logic on each one individually.
     for product in storage_list:
         print(f"{product}: {storage_list[product]}")
@@ -91,12 +97,14 @@ def main():
 if __name__ == "__main__":
     main()
 
+print('')
 #Display breakpoint between main program and independent functions.
 print("Funciones independientes según solicitado por ABPro6: ")
+print('')
 
 #Display and return an specific product in the store searching by name.
 def specific_product():
-    product= input('1. Ingrese el producto que desea revisar: ').capitalize()
+    product= input('5. Ingrese el producto que desea revisar: ').capitalize()
     if product in productos:
         print(f'Disponemos de {productos[product]} unidades de {product}')
     elif product not in productos:
@@ -106,21 +114,25 @@ def specific_product():
 #Call function.            
 specific_product()
 
+print('')
+
 #Display and return all products in the store.
 def whole_warehouse ():  
-    print('2. Actualmente contamos con los siguientes productos:')
+    print('6. Actualmente contamos con los siguientes productos:')
     #Go through each value in the data structure (dict).
     for key in productos.keys():
         print(f"{key}: {productos[key]}")
 #Call function.            
 whole_warehouse ()
 
+print('')
+
 #Display and return of products requested by the customer by entering a certain number of units.
 def product_by_num():
     #Create an empty list to use in 'elif' condition.
     request=[]
-    #Ask to the customer units they need.
-    requested_prod=int(input('3. Ingrese unidades que necesita (sólo digitos): '))
+    #Ask to the customer number of units they need.
+    requested_prod=int(input('7. Ingrese unidades que necesita (sólo digitos): '))
     for key in productos.keys():        
         if requested_prod <= productos[key]:
             #Fill the list to use it in next condition.
@@ -134,43 +146,49 @@ def product_by_num():
 #Call function.            
 product_by_num()
 
+print('')
 print("Fin Control de Bodega")
 print('')
 print("Comenzando Control de Ventas")
+print('')
 
 #Display and return number of customers.
 def users_number(x):
     #Var with len function, which returns number of items in an object.
     n_users=len(x.keys())
     #Display result.
-    print(f'Actualmente contamos con {n_users} usuarios.')
+    print(f'1. Actualmente contamos con {n_users} usuarios.')
     return n_users
 #Call the function
 users_number(users)
-print(f'')
+print('')
 
 #Display all our customers.
 def customers_list (x):  
-    print('1. Estos son nuestros clientes:')
+    print('Estos son nuestros clientes:')
     #Put a dictionary directly into a for loop, activating __iter__() on that dictionary to iterate over its keys.
     for key in x.keys():
         #Display each user and their respective id.
         print(f"{key}: {x[key]}")
 customers_list (users)
+print('')
 
 #Identify customer.
 def log_in(x):
-    user_id= input('Ingrese su ID:  ')
+    user_id= input('2. Ingrese su ID:  ')
     for id in x.keys():
         if user_id== id:
             print(f'!Bienvenid@ {x[user_id]}!')
         elif user_id not in x.keys():
             print("Aún no estás registrad@.Por favor, ingresa a Sing In.")           
 log_in(users)
+print('')
 
-#Request purchase by customer id, product id and the units (1 by default) to buy.
+#Initiating new program from line 189 to 253.
+#Step 2: Request purchase by customer id, product id and the units (1 by default) to buy.
 def fill_bag():
     bag= {}
+    #Display on terminal store products available.
     print("Los ID de nuestros productos disponibles: ")
     for name in productos.keys():
         print(f'{name}')
@@ -178,12 +196,12 @@ def fill_bag():
     to_bag= input().capitalize()
     bag[to_bag]= 1
     return bag
+print('')
 
-#Confirm if required product has stock.
+#Step 3: Confirm if required product has stock.
 def product_validation(bag_items,productos):
     #Iterate through dict.
-    for item in bag_items.keys():
-        # #Iterate through productos dict.
+    for item in bag_items.keys():     
         if item in productos.keys():
             unit= int(productos[item])
             if unit >=1: 
@@ -197,9 +215,10 @@ def product_validation(bag_items,productos):
             print('Compra cancelada')
             print(f'Lo sentimos, no contamos con stock de {item} por el momento.')
             bag_items={}
-            # product_validation(fill_bag(), productos)
             return bag_items, False
+print('')
 
+#Step 4: Confirm if product in bag is product customer wants.
 def confirm_purchase(final_bag):
     print('Su compra es: ')
     for item in final_bag.keys():
@@ -212,8 +231,9 @@ def confirm_purchase(final_bag):
             break
         else:
             print("Respuesta inválida")
+print('')
 
-
+#Step 1/5: Start/end the whole program.
 def main():
     contador=0
     validation=False
@@ -232,4 +252,6 @@ def main():
 if __name__ == "__main__":
     main()
 
+print('')
 print("Fin Control de Ventas")
+print('')
