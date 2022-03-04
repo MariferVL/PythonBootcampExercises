@@ -1,6 +1,4 @@
 # Control Bodega
-
-# Create a dict as a virtual warehouse with the initial products
 productos= {"Zapatillas": 20,
             "Poleras": 10, 
             "Zapatos": 15, 
@@ -8,11 +6,13 @@ productos= {"Zapatillas": 20,
             "Chaquetas": 5, 
             "Guantes": 4
             }
+print("Comenzando Control de Bodega")
+
 #Check available products.
 def checking_products(dict):
     #Iterate parameter keys.
     for key in dict.keys():
-        print(f'Producto:{key} = {dict[key]} unidades')
+        print(f'Producto:   {key}= {dict[key]} unidades')
 #Call function with specific parameter (global var).                
 checking_products(productos)
 
