@@ -19,16 +19,15 @@ print("")
 users={}
 
 #Identify customer.
-def sign_in():
+def sign_in(user_name):
     while True:
         user_name= input('Ingrese Nombre de Usuario:  ').capitalize ()
-        user_age= int(input('Ingrese su edad: (Sólo dígitos)  '))
         print(f'¡Bienvenid@ {user_name}! Ahora crea tu contraseña.')
         print('Debe contener entre 8 y 11 caracteres incluyendo mayúsculas, minúsculas y números.')
         print('¡Usuario creado con éxito!')
         print('')                   
         if continue_or_exit():
-            return users
+            return user_name
 
 def user_age(age):
     i=0
@@ -45,7 +44,7 @@ def user_age(age):
         print("Se acabaron tu número de intentos.")
         print("Vuelve a registrarte.")
 
-def password_validation():
+def password_validation(password):
     val=False
     i=0
     while i<4 and val==False:
@@ -94,7 +93,9 @@ def updated_users(users_dict):
 
 def main():
     user_name = sign_in()
-    usersuser_name[user_name]={'password': user_password, 'age': user_age}
+    age= user_age(age)
+    password=password_validation(password)
+    users[user_name]={'password': password, 'age': user_age}
     updated_users(users)
     print("Programa Finalizado")
 
