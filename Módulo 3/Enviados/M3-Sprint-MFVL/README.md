@@ -9,7 +9,7 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h1 align="center"><b> Sprint </b></h1>
+<h1 align="center">**Sprint**</h1>
 <h2 align="center"> Desarrollo Final del Módulo 3</h2>
 
 
@@ -24,7 +24,7 @@ GitHub: https://github.com/Marifer1111
   <p align="center">
     CONTEXTO
     <br />
-    <summary> La contingencia mundial de los últimos 2 años ha incrementado la adquisición de servicios y productos de forma online. Sin duda, esta nueva forma de comercializar es la nueva normalidad para muchos clientes y comerciantes, favoreciendo en gran medida a las Starups y PyMes.
+    > La contingencia mundial de los últimos 2 años ha incrementado la adquisición de servicios y productos de forma online. Sin duda, esta nueva forma de comercializar es la nueva normalidad para muchos clientes y comerciantes, favoreciendo en gran medida a las Starups y PyMes.<>
     </summary>
     <br />
     <br />
@@ -42,21 +42,11 @@ GitHub: https://github.com/Marifer1111
     <li>
       <a href="#acerca-del-programa">Acerca del Programa</a>
       <ul>
-        <li><a href="#lenguaje-de-programacion">Lenguaje de programación </a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#lenguaje-de-programación">Lenguaje de programación </a></li>
       </ul>
     </li>
     <li><a href="#uso">Uso</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
@@ -69,7 +59,7 @@ GitHub: https://github.com/Marifer1111
     Este proyecto tiene como fin encontrar soluciones a problemas generados por el e-commerce emergente. Para ello fue necesario desarrollar una solución tecnológica que cubra los 
     procesos de negocio y proponer una mejora en la gestión, el control, la seguridad, y 
     disponibilidad de información para el negocio y sus clientes. 
-    El sistema permite presentar <b>productos</b>, <b>tomar pedidos</b> y <b>hacer seguimiento</b> de estos y la <b>gestión de clientes</b>. Además, genera reportes y estadísticas que ayudan a tomar decisiones y mejoran el rendimiento de las empresas, considerando la cantidad de clientes, y la demanda de éstos. 
+    El sistema permite presentar **roductos**, **omar pedidos** y **acer seguimiento** de estos y la **estión de clientes**. Además, genera reportes y estadísticas que ayudan a tomar decisiones y mejoran el rendimiento de las empresas, considerando la cantidad de clientes, y la demanda de éstos. 
     </summary>
 
 <p align="left"><a href="#volver">Volver/a></p>
