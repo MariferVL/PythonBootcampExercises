@@ -9,16 +9,18 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h2 align="center"><b> Sprint </b></h2>
-<h3 align="center"> Desarrollo Final del Módulo 3</h3>
+<h1 align="center"><b> Sprint </b></h1>
+<h2 align="center"> Desarrollo Final del Módulo 3</h2>
 
 
 ## Contact
-María-Fernanda Villalobos López
+María-Fernanda Villalobos 
+<br />
 mfvl.1186@gmail.com
-GitHub: [https://github.com/Marifer1111]
+<br />
+GitHub: https://github.com/Marifer1111
 
-<p align="right">(<a href="#top">back to top</a>)</p>  
+<p align="right" ><a href="#top">Volver</a></p>  
   <p align="center">
     project_description
     <br />
@@ -65,7 +67,7 @@ GitHub: [https://github.com/Marifer1111]
 
 Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right"><a href="#top">Volver</a></p>
 
 
 
@@ -73,7 +75,7 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 * [Python](https://www.python.org/)
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right"><a href="#top">Volver</a></p>
 
 
 
@@ -89,7 +91,7 @@ Use this space to show useful examples of how a project can be used. Additional 
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right"><a href="#top">Volver</a></p>
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
@@ -98,5 +100,5 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 * []()
 * []()
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right"><a href="#top">Volver</a></p>
 
