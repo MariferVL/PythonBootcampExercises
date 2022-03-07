@@ -6,10 +6,6 @@ random 300 y 500 unidades.
 import time
 import random
 
-print("")
-print("Manejo de Bodega")
-print("")
-
 # Create a dict as a virtual warehouse with the initial products
 productos= {"vasos": {"units": 0, "made": "Chile" },
             "cucharas": {"units": 0, "made": "Chile" }, 
