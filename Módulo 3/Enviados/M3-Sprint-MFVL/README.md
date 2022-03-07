@@ -6,7 +6,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/Marifer1111/Ejercicios_Bootcamp/tree/main/M%C3%B3dulo%203/Enviados/M3-Sprint-MFVL">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="images/logo.png" alt="Logo" width="50%" height="50%">
   </a>
 
 <h1 align="center"><b>Sprint</b></h1>
@@ -25,8 +25,10 @@ GitHub: https://github.com/Marifer1111
 
   <p align="center">
     CONTEXTO
-    <br />
-    > La contingencia mundial de los últimos 2 años ha incrementado la adquisición de servicios y productos de forma online. Sin duda, esta nueva forma de comercializar es la nueva normalidad para muchos clientes y comerciantes, favoreciendo en gran medida a las Starups y PyMes.<>
+    <br/>
+        La contingencia mundial de los últimos 2 años ha incrementado la adquisición de servicios y productos de forma online. 
+        Sin duda, esta nueva forma de comercializar es la nueva normalidad para muchos clientes y comerciantes, favoreciendo 
+        en gran medida a las Starups y PyMes.
     </summary>
     <br />
     <br />
