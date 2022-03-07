@@ -9,4 +9,5 @@
                 enviar solicitudes de información adicional. 
         + Nuevos atributos y acciones que pueden realizar los objetos. 
         + Graficar relaciones entre diferentes clases.
-        + Desarrollen el ejercicio de forma intuitiva. """
+        + Desarrollen el ejercicio de forma intuitiva. 
+        """
