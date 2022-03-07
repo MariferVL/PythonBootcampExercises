@@ -12,7 +12,9 @@
 <h1 align="center">**Sprint**</h1>
 <h2 align="center"> Desarrollo Final del Módulo 3</h2>
 
+![](/screenshots/3.png)
 
+**Autora**
 María-Fernanda Villalobos 
 <br />
 mfvl.1186@gmail.com
