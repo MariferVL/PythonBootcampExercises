@@ -9,12 +9,12 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h1 align="center">**Sprint**</h1>
+<h1 align="center"><b>Sprint</b></h1>
 <h2 align="center"> Desarrollo Final del Módulo 3</h2>
 
-![](/screenshots/3.png)
+![](https://miro.medium.com/max/960/0*H918SbNILoTE9IlO.jpg)
 
-**Autora**
+<b>Autora</b>
 María-Fernanda Villalobos 
 <br />
 mfvl.1186@gmail.com
@@ -61,10 +61,10 @@ GitHub: https://github.com/Marifer1111
     Este proyecto tiene como fin encontrar soluciones a problemas generados por el e-commerce emergente. Para ello fue necesario desarrollar una solución tecnológica que cubra los 
     procesos de negocio y proponer una mejora en la gestión, el control, la seguridad, y 
     disponibilidad de información para el negocio y sus clientes. 
-    El sistema permite presentar **roductos**, **omar pedidos** y **acer seguimiento** de estos y la **estión de clientes**. Además, genera reportes y estadísticas que ayudan a tomar decisiones y mejoran el rendimiento de las empresas, considerando la cantidad de clientes, y la demanda de éstos. 
+    El sistema permite presentar <b>roductos</b> <b>omar pedidos</b> y <b>hacer seguimiento</b> de estos y la <b>estión de clientes</b> Además, genera reportes y estadísticas que ayudan a tomar decisiones y mejoran el rendimiento de las empresas, considerando la cantidad de clientes, y la demanda de éstos. 
     </summary>
 
-<p align="left"><a href="#volver">Volver/a></p>
+<p align="left"><a href="#volver">Volver</a></p>
 
 
 
@@ -72,7 +72,7 @@ GitHub: https://github.com/Marifer1111
 
 * [Python](https://www.python.org/)
 
-<p align="left"><a href="#volver">Volver/a></p>
+<p align="left"><a href="#volver">Volver</a></p>
 
 
 
@@ -82,7 +82,7 @@ Use this space to show useful examples of how a project can be used. Additional 
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
-<p align="left"><a href="#volver">Volver/a></p>
+<p align="left"><a href="#volver">Volver</a></p>
 
 
 
@@ -93,5 +93,5 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 * []()
 * []()
 
-<p align="left"><a href="#volver">Volver/a></p>
+<p align="left"><a href="#volver">Volver</a></p>
 
