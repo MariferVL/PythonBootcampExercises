@@ -6,7 +6,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/Marifer1111/Ejercicios_Bootcamp/tree/main/M%C3%B3dulo%203/Enviados/M3-Sprint-MFVL">
-    <img src="images/logo.png" alt="Logo" width="22%" height="22%">
+    <img src="images/logo.png" alt="Logo" width="50px" height="50%">
   </a>
 
 <h1 align="center"><b>Sprint</b></h1>
