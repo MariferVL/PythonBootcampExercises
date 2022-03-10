@@ -1,5 +1,5 @@
 """ DESARROLLO - Continuación del trabajo.
-● Ccrear clases con sintaxis Python
+● Crear clases con sintaxis Python
 
 ● Actualizando lo anterior:
     + Agregar nueva clase pertinente a la aplicación que están desarrollando
