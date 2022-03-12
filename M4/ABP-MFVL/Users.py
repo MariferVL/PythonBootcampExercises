@@ -1,5 +1,5 @@
-from Verification import *
-
+from UserMain import main
+from UserCheck import UserCheck
 """ 
 DESARROLLO
 Crear clases con sintaxis Python
@@ -15,7 +15,9 @@ Actualizando módulo anterior, Python básico:
 
 
 # n_users=0
+#Empty list to add users info.
 users={}
+#Empty dict to add users info by age group for marketing purposes.
 mktg={"greatest":[],
         "silent":[],
         "baby_Boomers":[],
@@ -26,72 +28,160 @@ mktg={"greatest":[],
 
 # class Users is declared.
 class Users: 
-    # constructor
-    def __init__(self,firstname,surname,username,password,birthDay, birthMonth,birthYear,email,phone ):
+    # instance attributes.
+    def __init__(self,firstname,surname,username,password,birthDay,birthMonth,birthYear, email,phone ):
         # keys are initialized with their respective values
         self._firstname= firstname
         self._surname= surname
         self.username= username
         self.__password = password
+        self.email= email
+        self.phone = phone
         self.birthDay = birthDay
         self.birthMonth = birthMonth
         self.birthYear = birthYear 
-        self.email= email
-        self.phone = phone
+        # self.birthDate= birthDate
 
-    def sign_in(self):
+    
+    # instance method
+    def sign_up(self):
         self._firstname= input('Ingresa tu nombre: ')
         self._surname= input('Ingresa tu apellido: ')
         self.username= input('Ingresa tu nombre de usuario: ')
-        self.password = password_validation()
-        self.birthDay = int(input('Ingresa tu día de nacimiento: '))
-        self.birthMonth = int(input('Ingresa tu mes de nacimiento: ')) 
-        self.birthYear = int(input('Ingresa tu año de nacimiento: ')) 
-        self.email = input('Ingresa tu número correo electrónico: ') 
+        password = input('Ingresa tu nombre de usuario: ')
+        UserCheck.password_validation(password)
+        birthDay = input('Ingresa tu día de nacimiento: ')
+        print('Ingresa sólo dígitos de lo solicitado:')
+        UserCheck.check_int(birthDay)
+        birthMonth = input('Ingresa tu mes de nacimiento: ') 
+        UserCheck.check_int(birthMonth)
+        birthYear = input('Ingresa tu año de nacimiento: ') 
+        UserCheck.check_int(birthYear)
+        self.email = input('Ingresa tu correo electrónico: ') 
         self.phone = input('Ingresa tu número de contacto: ')
+        UserCheck.check_int(birthDay)
 
-    def save_dict(self):
+    def save_users(self):
         # calling attribute __dict__ on user object
+        users.append(self)   #Duda existencial dict/lista al borrar
         users[self.username]= self.__dict__
         #  and printing it.
         print(users)
         return users
 
     def age_group(self):
-        contact_info=(self.username,self._firstname,self._surname,self.email)
-        for user, info in users.items():
+        contact_info=(self.username,self._firstname,self._surname,self.email)   # com
+        for info in users.values():
                 if info["birthYear"] in range (1901,1926):
-                    mktg ["greatest"].append(self)
+                    mktg ["greatest"].append(contact_info)
                 elif info["birthYear"] in range (1927,1945):
-                    print( "silent")
+                    mktg ["silent"].append(contact_info)
                 elif info["birthYear"] in range (1946,1964):
-                    print( "baby_Boomers" )
+                    mktg ["baby_Boomers"].append(contact_info)
                 elif info["birthYear"] in range (1965,1976):
-                    print( "gen_X")
+                    mktg ["gen_X"].append(contact_info)
                 elif info["birthYear"] in range (1977,1983):
-                    print( "xennials" )
+                    mktg ["xennials"].append(contact_info)
                 elif info["birthYear"] in range (1983,2000):
-                    print( "gen_Y")
+                    mktg ["gen_Y"].append(contact_info)
                 elif info["birthYear"] >= 2000:
-                    print( "gen_Z")
+                    mktg ["gen_Z"].append(contact_info)
 
-    def shopping(self):
+    def log_in(self):
         print ("Ingrese su nombre de usuario")
         user_name= input()
         print ("Ingrese su contraseña")
         user_pass=input()
+        users= self.__dict__
         if user_name in users.keys():
             if users[user_name]["password"]== user_pass:
                 print(f'Bienvenid@ {user_name}')
-                print('Vamos a comprar!')
+        else:
+            print("El usuario/contraseña no está registrada")
+            print("Vuelve a ingresar o Registrate.")
+            return main()
+    
+    def delete_user(self):
+        users[self.username]= self.__dict__
+        print (users)
+        user2del= input("Ingrese el nombre de usuario de la cuenta a eliminar: ")
+        if user2del in users.keys():
+            del users[user2del]  #duda 2
+            return users 
+        
+    def contact_us():
+        pass
 
-# Driver Code
-if __name__ == "__main__":
-    # object user of class Users.
-    user= Users()
-    user.save_dict()
-    user.age_group()
-    user.shopping()
+#Zona en DUDA
+
+#Child class (Inheritance)
+class Greatest(Users):
+
+    def __init__(self):
+        # call super() function to run the __init__() method 
+        # of the parent class inside the child class
+        super().__init__()
+
+
+class Silent(Users):
+
+    def __init__(self):
+        # call super() function
+        super().__init__()
+
+class BabyBoomers(Users):
+
+    def __init__(self):
+        # call super() function
+        super().__init__()
+
+class GenX(Users):
+
+    def __init__(self):
+        # call super() function
+        super().__init__()
+
+class Xennials(Users):
+
+    def __init__(self):
+        # call super() function
+        super().__init__()
+
+class GenY(Users):
+
+    def __init__(self):
+        # call super() function
+        super().__init__()
+
+class GenZ(Users):
+
+    def __init__(self):
+        # call super() function.
+        super().__init__()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# # Driver Code
+# if __name__ == "__main__":
+#     # object user of class Users.
+#     user= Users()
+#     user.save_dict()
+#     user.age_group()
+#     user.shopping()
 
 
     

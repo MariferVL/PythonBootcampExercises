@@ -1,25 +1,20 @@
+
 import re
 
-class UserId:
-    #Add and validate age.
-
-    def user_age():
+class UserCheck:
+    #Add and validate user birth date.
+    def check_int(input):
         i=0
         #Start a loop with 3 chances to write their age following instructions.
         while i<3:
             i+=1
-            print('A continuacón, ingresa sólo dígitos de lo solicitado:')
-            birthDay = int(input('Ingresa tu día de nacimiento: '))
-            birthMonth = int(input('Ingresa tu mes de nacimiento: ')) 
-            birthYear = int(input('Ingresa tu año de nacimiento: ')) 
-            birthdate= (birthDay,birthMonth,birthYear)
             #The try block lets you test a block of code for errors.
             try:
                 # Convert it into integer
-                val = int(birthdate)
-                print(f'Fecha ingresada correctamente: {val}')
+                val = int(input)
+                # print(f'Fecha ingresada correctamente: ')
                 print('')
-                return birthdate
+                return input
             #The except block lets you handle the error. 
             # Execute a special block of code for a special kind of error: "ValueError".
             except ValueError:
@@ -27,7 +22,7 @@ class UserId:
             if i==3:
                 print("Se acabaron tu número de intentos.")
                 print("Vuelve a registrarte.")
-                return continue_or_exit()
+                # return continue_or_exit()
         
     #Add and validate password.
     def password_validation():
@@ -63,4 +58,5 @@ class UserId:
             if i==3:
                 print("Se acabaron tu número de intentos.")
                 print("Vuelve a registrarte.")
-                return continue_or_exit()
+                # return continue_or_exit()
+
