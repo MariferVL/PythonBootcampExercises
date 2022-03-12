@@ -1,9 +1,11 @@
-
+#Empty list to add users info.
 users={}
 
+# class Users is declared.
 class Users():
-
+    # constructor: instance Users attributes.
     def __init__(self, firstName, surname, username,password,email,pronouns,ageGroup, balance):
+        # keys are initialized with their respective values
         self.firstName= firstName
         self.surname=surname
         self._username = username
@@ -13,26 +15,29 @@ class Users():
         self.ageGroup=ageGroup
         self.balance = balance
 
+    # instance method to save users info.
     def save_user(self):
         users[self._username]= {self.firstName,self.surname,
                         self.__password,self.email,self.pronouns,self.ageGroup,
                         self.balance}
         return users
 
-    # getter method
+    # getter method to display protected info.
     def get_password(self):
         return self.__password
 
-    # setter method
+    # setter method to change protected info.
     def set_username(self,x):
         print(f"Su nombre de usuario es {user1._username}")
         old=self._username
         self._username=x
+        #change the old key for the new one.
         users[x] = users.pop(old)
         print(f"Cambio de nombre de usuario a: {user1._username}")
         return users
 
 class Sellers():    
+    # constructor: instance Sellers attributes.
     def __init__(self, firstName,surname,id, category, initialProfit,customer):
         self.firstName= firstName
         self.surname=surname
@@ -43,19 +48,20 @@ class Sellers():
         self.profits=[]
         self.__profitPercent=0.11
 
+    # display the customer username assisted by the seller.
     def assisted_user(self):
         print (f"{self.firstName} {self.surname} atendió a {self.customer._username}.")
 
+    # instance method to sell the products.
     def sell(self,user, product, seller, ):
-        user.balance = user.balance - product.price
         print("Cuántos Zafu desea comprar?")
         bag=int(input(f"Máx {product.stock} unid.:  "))
+        user.balance = user.balance - (bag * product.price)
         product.stock = product.stock - bag
         profit = int(bag* product.price * self.__profitPercent)
         seller.profits.append(profit)
         print("¡Venta Exitosa!")
         print(f"La ganancia del vendedor es: $ {profit}")
-        # return seller_profits
 
     # To check the employee's business skills.
     def seller_quality(self):
@@ -74,7 +80,7 @@ class Sellers():
         else:
             return f"{self.firstName} no es inútil, sirve de mal ejemplo. Y...FUERA!"
     
-
+# constructor: instance Warehouse attributes.
 class Warehouse():
     def __init__(self, SKU, name,model,description,stock, price):
         self.SKU = SKU
@@ -84,6 +90,7 @@ class Warehouse():
         self.stock= stock
         self.price= price
 
+    #Display product info.
     def show_details(self):
         print(f"Producto:{self.name} \n          Modelo:{self.model}, Descripción: {self.description}, Stock:{self.stock}")
 
@@ -95,10 +102,10 @@ class Warehouse():
 
 # Driver code
 # An Object of Users.
-user1 = Users("Amanel", "Upekkha", "Ama","fg54gdgGs", "amanel@gmail.com", "she", "genY", 88000)
+user1 = Users("Amanel", "Upekkha", "Ama","fg54gdgGs", "amanel@gmail.com", "she", "genY", 880000)
 user1.save_user()
-#display users dictionary.
 print("")
+#Display users dictionary.
 print (users)
 print("")
 # An Object of Sellers.
@@ -107,9 +114,9 @@ seller1 = Sellers("Marck", "Scott","IS-1133", "Vendedor Integral", 1111111, user
 # An Object of Warehouse.
 product1 = Warehouse("Z11-BLN-P-22","Zafu", "Foccus", "Zafu color blanco, 40cm de diam x 20cm de alto. Nueva Temporada.",1111,33000,)
 print("Información cliente:")
-# retrieving password using getter.
+# Retrieving password using getter.
 print(f"Su contraseña es: {user1.get_password()}")
-# setting the username using setter.
+# Setting the username using setter.
 user1.set_username("conTodo")
 print (users)
 print(f"El usuario cuenta con ${user1.balance} de saldo.")
