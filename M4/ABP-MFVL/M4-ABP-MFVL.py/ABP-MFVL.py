@@ -28,12 +28,12 @@ class Users():
 
     # setter method to change protected info.
     def set_username(self,x):
-        print(f"Su nombre de usuario es {user1._username}")
+        print(f"Su nombre de usuario es {self._username}")
         old=self._username
         self._username=x
         #change the old key for the new one.
         users[x] = users.pop(old)
-        print(f"Cambio de nombre de usuario a: {user1._username}")
+        print(f"Cambio de nombre de usuario a: {self._username}")
         return users
 
 class Sellers():    
@@ -53,13 +53,13 @@ class Sellers():
         print (f"{self.firstName} {self.surname} atendió a {self.customer._username}.")
 
     # instance method to sell the products.
-    def sell(self,user, product, seller, ):
+    def sell(self,user, product):
         print("Cuántos Zafu desea comprar?")
         bag=int(input(f"Máx {product.stock} unid.:  "))
         user.balance = user.balance - (bag * product.price)
         product.stock = product.stock - bag
         profit = int(bag* product.price * self.__profitPercent)
-        seller.profits.append(profit)
+        self.profits.append(profit)
         print("¡Venta Exitosa!")
         print(f"La ganancia del vendedor es: $ {profit}")
 
@@ -124,7 +124,7 @@ print("")
 print(f"Stock actualizado: {product1.model} = {product1.stock} unidades.")
 product1.show_details()
 print("")
-seller1.sell(user1,product1,seller1)
+seller1.sell(user1,product1)
 seller1.assisted_user()
 print(f"El saldo actualizado del cliente es: ${user1.balance}")
 print(f"Stock actualizado: {product1.model} = {product1.stock} unidades.")

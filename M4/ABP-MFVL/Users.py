@@ -1,18 +1,5 @@
 from UserMain import main
 from UserCheck import UserCheck
-""" 
-DESARROLLO
-Crear clases con sintaxis Python
-Actualizando módulo anterior, Python básico:  
-        + Identifica 3 tipos de usuarios de su aplicación.
-        + Acciones  se ejecutan de forma interna en nuestra aplicación:
-            Ej: acceder a datos sensibles, registrar nuevos usuarios, 
-                enviar solicitudes de información adicional. 
-        + Nuevos atributos y acciones que pueden realizar los objetos. 
-        + Graficar relaciones entre diferentes clases.
-        + Desarrollen el ejercicio de forma intuitiva. 
-        """
-
 
 # n_users=0
 #Empty list to add users info.
@@ -112,10 +99,19 @@ class Users:
     def contact_us():
         pass
 
-#Zona en DUDA
+class Shipping_info():
+    def __init__(self, street,city, postalCode, province, country ):
+        self.street = street 
+        self.city = city
+        self.postalCode= postalCode
+        self.province= province
+        self.country= country
 
-#Child class (Inheritance)
-class Greatest(Users):
+# super() builtin returns a proxy object (temporary object of the superclass)
+# allows us to access methods of the base class.
+
+#Child class (Multiple Inheritance)
+class Greatest(Users, Shipping_info):
 
     def __init__(self):
         # call super() function to run the __init__() method 
@@ -123,37 +119,37 @@ class Greatest(Users):
         super().__init__()
 
 
-class Silent(Users):
+class Silent(Users, Shipping_info):
 
     def __init__(self):
         # call super() function
         super().__init__()
 
-class BabyBoomers(Users):
+class BabyBoomers(Users, Shipping_info):
 
     def __init__(self):
         # call super() function
         super().__init__()
 
-class GenX(Users):
+class GenX(Users, Shipping_info):
 
     def __init__(self):
         # call super() function
         super().__init__()
 
-class Xennials(Users):
+class Xennials(Users, Shipping_info):
 
     def __init__(self):
         # call super() function
         super().__init__()
 
-class GenY(Users):
+class GenY(Users, Shipping_info):
 
     def __init__(self):
         # call super() function
         super().__init__()
 
-class GenZ(Users):
+class GenZ(Users, Shipping_info):
 
     def __init__(self):
         # call super() function.
