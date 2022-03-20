@@ -17,7 +17,8 @@ Bodega_Auxiliar= {}
 
 #Chose between Long-distance or Short-distance Shipping depending on distance in km.
 def shipping(bag):
-    print("\nDespacho: \n")
+    print("Despacho: \n")
+    parcel={}
     for item in bag.keys():
         print(f'{item}: ')    
         # Distance will be entered by terminal.
@@ -25,38 +26,36 @@ def shipping(bag):
         print("(Calle, Número, Población, Ciudad, Región y País)")
         address= input("")
         # Distance will be entered by terminal.
-        print("> Ingrese Kilometros de distancia")
+        print("\n> Ingrese Kilometros de distancia")
         distance= int(input("(Sólo dígitos):    "))
+        parcel[item]={'product': bag[item]["product"], 'units': bag[item]["units"], 'address': address }
         if distance <= 1000:
-            check_warehouse(Bodega_A,bag)
+            check_warehouse(parcel,Bodega_A)
             print(f" {distance} Km: Le corresponde despacho 'Short-D'")
-            print("Proceso de despacho iniciado")
-            print("Gracias por comprar Presentes.")
+            print("\n\tCompra en camino.")
+            print("\t\t¡Gracias por comprar Presentes! \n")
             return Bodega_A,costumer_menu()
         elif distance > 1000:
-            check_warehouse(Bodega_B,bag)
+            check_warehouse(parcel,Bodega_B)
             print(f" {distance} Km:Le corresponde despacho 'Long-D'")
-            print("Proceso de despacho iniciado")
-            print("Gracias por comprar Presentes.")
-            Bodega_B[item]={'product': bag[item]["product"], 'units': bag[item]["units"], 'address': address } 
+            print("\n\tCompra en camino.")
+            print("\t\t¡Gracias por comprar Presentes! \n")
             return Bodega_B,costumer_menu()
 
 
-def check_warehouse(warehouse,bag):
-    for item in bag.keys():
-        for prod, info in warehouse.items():
+def check_warehouse(parcel,bodega):
+    for item in parcel.keys():
+        for prod, info in bodega.items():
             if 'units' in info.values():
-                print(warehouse[prod]['units'])
-                sum = warehouse[prod]['units'] + sum
+                print(bodega[prod]['units'])
+                sum = bodega[prod]['units'] + sum
                 print(sum)
                 if sum < 500:
-                    warehouse[item]={'product': bag[item]["product"], 'units': bag[item]["units"], 'address': address } 
-                    return warehouse
+                    return bodega
                 else: 
-                    print(f"Limite Alcanzado en Bodega.")
+                    print("Limite Alcanzado en Bodega.")
                     print("Parcel será enviada momentaneamente a Bodega Auxiliar")
-                    print("Proceso de despacho iniciado")
-                    print("Gracias por comprar Presentes.")
-                    Bodega_Auxiliar[item]={'product': bag[item]["product"], 'units': bag[item]["units"], 'address': address } 
+                    print("\t\t¡Gracias por comprar Presentes! \n")
+                    Bodega_Auxiliar[item]={'product': parcel[item]["product"], 'units': parcel[item]["units"], 'address': parcel[item]["address"] } 
                     return Bodega_Auxiliar, costumer_menu()
 
