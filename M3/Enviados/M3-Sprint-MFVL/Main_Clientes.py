@@ -1,9 +1,8 @@
 from Clientes import *
-from Venta import *
 
 # Customer menu options.
 def costumer_menu():
-    print("¿Qué desea hacer?")
+    print("\n ¿Qué desea hacer?")
     print("> Agregar Usuario (A)")
     print("> Eliminar Usuario (E)")
     print("> Comprar (C)")
@@ -17,7 +16,7 @@ def costumer_menu():
     elif answer == "E":
         delete_user()
     elif answer == "C":
-        log_in()
+        main()
     else:
         print("Respuesta Inválida \n")
         #Start function again.

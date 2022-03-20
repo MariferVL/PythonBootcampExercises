@@ -4,16 +4,27 @@ import time
 import random
 
 
-n = random.randint(300,500)
+# n = random.randint(300,500)
 
 # Create a dict as a virtual warehouse with the initial products. 
 # Random stock between 300 and 500 units + product description.
-productos= {"Vasos": {"units": n, "made": "Chile" },
-            "Cucharas": {"units": n, "made": "Chile" }, 
-            "Cuchillos": {"units": n, "made": "Chile" },
-            "Tenedores": {"units": n, "made": "Chile" },
+productos= {"Vasos": {"units": random.randint(300,500), "made": "Chile" },
+            "Cucharas": {"units": random.randint(300,500), "made": "Chile" }, 
+            "Cuchillos": {"units": random.randint(300,500), "made": "Chile" },
+            "Tenedores": {"units": random.randint(300,500), "made": "Chile" },
             }
 
+employees= {"emp1" : {"name": "Jim", "username": "Sturgess","age": 35},
+        "emp2" :{"name": "Ryan", "username": "Gosling", "age": 35},
+        "emp3" :{"name": "Violeta", "username": "Parra ", "age": 49},
+        "emp4" :{"name": "Gato", "username": "Alquinta", "age": 35},
+        "emp5" :{"name": "Anne", "username": "Hathaway", "age": 39},
+        "emp6" :{"name": "Hae-Jo", "username": "Chang", "age": 35},
+        "emp7" :{"name": "Willy", "username": "Rodríguez", "age": 44},
+        "emp8" :{"name": "Adele", "username": "Blue", "age": 33},
+        "emp9" :{"name": "Jhon", "username": "Lennon","age": 40},
+        "emp10" :{"name": "Ed", "username": "Sheeran","age": 31}
+            }
 
 #Store new products or add units.
 def add_products():

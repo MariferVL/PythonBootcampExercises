@@ -1,5 +1,5 @@
 from Bodega import *
-from Clientes import updated_users
+from Clientes import *
 
 # Warehouse menu options.
 def menu():

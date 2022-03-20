@@ -1,10 +1,12 @@
 """ Información clientes """
 
 # Import the re module, which can be used to work with Regular Expressions.
+from optparse import Values
 import re
 import datetime
 from Main_Clientes import costumer_menu
-from Venta import employees
+from Bodega import *
+from Envios import shipping
 
 # Create a dictionary of users/customers info.
 users = {'Tamara': 
@@ -213,4 +215,81 @@ def updated_users():
             print("Se acabaron tu número de intentos. \n")
     
 
+Bag={}
+#Initiating shopping program.
+#Step 2: Request purchase by customer id, product id and the units (1 by default) to buy.
+#Identify customer.
+def log_in():
+    username= input('> Ingrese su Nombre de Usuario/ID:  ').capitalize()
+    if username in users.keys():
+        print(f'\n\t\t!Bienvenid@ {username}!\n')
+        return username
+    elif username not in users.keys():
+        print("Aún no estás registrad@.")           
+        print("Lo dirigiremos a sección Registro.\n")
+        return save_user()
+
+def fill_bag(user):
+    #Display on terminal store products available.
+    print("Nuestros productos disponibles son: ")
+    for name in productos.keys():
+        print(f'>{name}')
+    print('> Ingresa el producto a comprar: ')
+    to_bag= input().capitalize()
+    print('\n> Ingresa unidades a comprar: (Sólo dígitos) ')
+    units= int(input())
+    Bag[user]= {'product': to_bag , 'units': units} 
+    return Bag
+
+
+#Step 3: Confirm if required product has stock.
+def check_stock(bag):
+    #Iterate through dict.
+    for user in bag.keys():   
+        product=bag[user]['product']
+        if product in productos.keys():
+            if productos[product]['units'] >= bag[user]['units']: 
+                print(f'\nTu producto {product} a sido agregado a tu carrito de compras.\n')
+                return bag, True
+            elif  productos[product]['units'] < bag[user]['units']:
+                print('\n Compra cancelada')
+                print(f'Lo sentimos, no contamos con stock de {product} por el momento.\n')
+                return costumer_menu()
+        elif product not in productos:
+            print('\n Compra cancelada')
+            print(f'Lo sentimos, no contamos con stock de {product} por el momento.\n')
+            return bag, False
+
+
+#Step 4: Confirm if product in bag is product customer wants.
+def confirm_purchase(final_bag):
+    for item in final_bag.keys():
+        print(f'{item}, su compra es: ')
+        print(f'\t{final_bag[item]["product"]}: {final_bag[item]["units"]} unidades ')
+        print('')
+        answer= input('Si/No:  ').capitalize()
+        if answer == "Sí" or "Si":
+            print('\n¡Compra aprobada!')
+            print(f'{item}, compruebe detalle de compra y boleta en su cuenta. \n')
+            return final_bag,shipping(final_bag)
+        elif answer == "No":
+            print('Lo sentimos. Por favor, vuelve a realizar tu compra.')
+            return costumer_menu()
+        else:
+            print("Respuesta inválida \n")
+
+#Step 1/5: Start/end the whole program.
+def main():
+    user=log_in()
+    i=0
+    val=False
+    while val==False:
+        Bag = fill_bag(user)
+        Bag, val = check_stock(Bag)
+        i=i+1
+        if i==3:
+            print('Se agotaron sus intentos.')
+            break
+    if val==True:
+        confirm_purchase(Bag)
 
