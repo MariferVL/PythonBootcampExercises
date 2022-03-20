@@ -61,13 +61,11 @@ GitHub: https://github.com/Marifer1111
     </summary>
 
 
-
 ### Lenguaje de programación
 
 * [Python](https://www.python.org/)
 
 <p align="left"><a href="#volver">Volver</a></p>
-
 
 
 
@@ -91,11 +89,11 @@ Este programa cuenta con 5 archivos: Bodega,Clientes y Envíos, más 2 menús co
   </ul>
 </details>
 <div align="center">
- <img src="MenuBodega.png" width="400px" height="400px">
+ <img src="Images/MenuBodega.png" width="400px" height="400px">
  
- <img src="Bodega.png" width="400px" height="400px">
+ <img src="Images/Bodega.png" width="400px" height="400px">
 </div>
-
+<br />
 <details>
   <summary><b>Información clientes</b></summary>
   <ul>
@@ -112,11 +110,11 @@ Este programa cuenta con 5 archivos: Bodega,Clientes y Envíos, más 2 menús co
   </ul>
 </details>
 <div align="center">
-<img src="MenuClientes.png " width="400px" height="400px">
+<img src="Images/MenuClientes.png " width="400px" height="400px">
 
-<img src="Clientes.png" width="400px" height="400px">
+<img src="Images/Clientes.png" width="400px" height="400px">
 </div>
-
+ <br />
 <details>
   <summary><b>Sistema de envío</b></summary>
   <ul>
@@ -135,9 +133,9 @@ Este programa cuenta con 5 archivos: Bodega,Clientes y Envíos, más 2 menús co
   </ul>
 </details>
 <div align="center">
- <img src="Envios.png" width="400px" height="400px">
+ <img src="Images/Envios.png" width="400px" height="400px">
 </div>
-
+<br />
 <p align="left"><a href="#volver">Volver</a></p>
 
 
