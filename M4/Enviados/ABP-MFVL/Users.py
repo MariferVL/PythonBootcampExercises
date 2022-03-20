@@ -12,91 +12,160 @@ mktg={"greatest":[],
         "xennials":[],
         "gen_Y":[],
         "gen_Z":[]}
+                
 
-# class Users is declared.
+# Parent class Users is declared.
 class Users: 
     # instance attributes.
-    def __init__(self,firstname,surname,username,password,birthDay,birthMonth,birthYear, email,phone ):
+    def __init__(self,firstname,surname,ID,password,birthDay,birthMonth,birthYear, email, contact):
         # keys are initialized with their respective values
-        self._firstname= firstname
-        self._surname= surname
-        self.username= username
+        self.firstname= firstname
+        self.surname= surname
+        self.ID= ID
         self.__password = password
-        self.email= email
-        self.phone = phone
         self.birthDay = birthDay
         self.birthMonth = birthMonth
         self.birthYear = birthYear 
-        # self.birthDate= birthDate
+        self.email= email
+        self.contact = contact 
 
-    
     # instance method
-    def sign_up(self):
-        self._firstname= input('Ingresa tu nombre: ')
-        self._surname= input('Ingresa tu apellido: ')
-        self.username= input('Ingresa tu nombre de usuario: ')
-        password = input('Ingresa tu nombre de usuario: ')
-        UserCheck.password_validation(password)
-        birthDay = input('Ingresa tu día de nacimiento: ')
-        print('Ingresa sólo dígitos de lo solicitado:')
-        UserCheck.check_int(birthDay)
-        birthMonth = input('Ingresa tu mes de nacimiento: ') 
-        UserCheck.check_int(birthMonth)
-        birthYear = input('Ingresa tu año de nacimiento: ') 
-        UserCheck.check_int(birthYear)
-        self.email = input('Ingresa tu correo electrónico: ') 
-        self.phone = input('Ingresa tu número de contacto: ')
-        UserCheck.check_int(birthDay)
+    def log_in(users):
+        username= input('> Ingrese su Nombre de Usuario/ID:  ').capitalize()
+        if username in users.keys():
+            print(f'\n\t\t!Bienvenid@ {username}!\n')
+            return username
+        elif username not in users.keys():
+            print("Aún no estás registrad@.")           
+            print("Lo dirigiremos a sección Registro.\n")
+            return 
 
-    def save_users(self):
-        # calling attribute __dict__ on user object
-        users.append(self)   #Duda existencial dict/lista al borrar
-        users[self.username]= self.__dict__
-        #  and printing it.
-        print(users)
+    def get_password(self):
+        return self.__password
+
+    def sign_up(self):
+        self.firstname= input('Ingresa tu nombre: ')
+        self.surname= input('Ingresa tu apellido: ')
+        self.ID= input('Ingresa tu nombre de usuario: ')
+        self.__password = input('Ingresa tu nombre de usuario: ')
+        UserCheck.password_validation(self.__password)
+        print('Ingresa sólo dígitos de la fecha solicitada')
+        self.birthDay = input('Ingresa tu día de nacimiento: ')
+        UserCheck.check_int(self.birthDay)
+        self.birthMonth = input('Ingresa tu mes de nacimiento: ') 
+        UserCheck.check_int(self.birthMonth)
+        self.birthYear = input('Ingresa tu año de nacimiento: ') 
+        UserCheck.check_int(self.birthYear)
+        self.email = input('Ingresa tu correo electrónico: ') 
+        self.contact = input('Ingresa tu número de contacto: ')
+        UserCheck.check_int(self.contact)
+
+    # instance method to save users info.
+    def save_user(self,users):
+        dob= '{self.birthDay}/{self.birthMonth}/{self.birthYear}'
+        users[self.ID]= {self.firstname,self.surname,
+                        self.__password,dob,self.email,self.contact}
+        return users
+        
+    def delete_user(self,users):
+        print("\nEliminacón de Usuarios: \n")
+        print("\t Ingrese nombre de usuario/ID de la cuenta a eliminar:")
+        d_user = input().capitalize()
+        if d_user in users.keys():
+            i=0
+            while i < 3:
+                i += 1
+                password= input('> Ingrese su contraseña:')
+                if password == users[d_user][self.__password]:
+                    remove = users.pop(d_user)
+                    print(f"\n>  {d_user}:{remove} ha sido eliminado. \n")
+                    return users
+                else:
+                    print('Contraseña Incorrecta \n')
+                if i == 3:
+                    print("Se acabaron tu número de intentos. \n")
+                    return
+        else:
+            print(f"\n{d_user} no está registrado. \n")
+            # menu()
+        
+class Employee(Users):
+    def __init__(self, firstname, surname, ID, password, birthDay, birthMonth, birthYear, email, contact):
+        # call super() function to run the __init__() method 
+        # of the parent class inside the child class
+        super().__init__(firstname, surname, ID, password, birthDay, birthMonth, birthYear, email, contact)
+        #GBP
+        self.base_salary= 800
+
+class Seller(Employee):
+    def __init__(self, firstname, surname, ID, password, birthDay, birthMonth, birthYear, email, contact, customer):
+        super().__init__(firstname, surname, ID, password, birthDay, birthMonth, birthYear, email, contact)
+        self.customer=customer
+        self.sales_balance=[]
+        self.profit_percent= 11
+
+    def save_user(self,users):
+        dob= '{self.birthDay}/{self.birthMonth}/{self.birthYear}'
+        users[self.ID]= {self.firstname,self.surname,
+                        self.__password,dob,self.email,self.contact,self.sales_balance}
         return users
 
-    def age_group(self):
-        contact_info=(self.username,self._firstname,self._surname,self.email)   # com
-        for info in users.values():
-                if info["birthYear"] in range (1901,1926):
-                    mktg ["greatest"].append(contact_info)
-                elif info["birthYear"] in range (1927,1945):
-                    mktg ["silent"].append(contact_info)
-                elif info["birthYear"] in range (1946,1964):
-                    mktg ["baby_Boomers"].append(contact_info)
-                elif info["birthYear"] in range (1965,1976):
-                    mktg ["gen_X"].append(contact_info)
-                elif info["birthYear"] in range (1977,1983):
-                    mktg ["xennials"].append(contact_info)
-                elif info["birthYear"] in range (1983,2000):
-                    mktg ["gen_Y"].append(contact_info)
-                elif info["birthYear"] >= 2000:
-                    mktg ["gen_Z"].append(contact_info)
+    def assisted_user(self):
+        print (f"{self.firstname} {self.surname} atendió a {self.customer._username}.")
 
-    def log_in(self):
-        print ("Ingrese su nombre de usuario")
-        user_name= input()
-        print ("Ingrese su contraseña")
-        user_pass=input()
-        users= self.__dict__
-        if user_name in users.keys():
-            if users[user_name]["password"]== user_pass:
-                print(f'Bienvenid@ {user_name}')
-        else:
-            print("El usuario/contraseña no está registrada")
-            print("Vuelve a ingresar o Registrate.")
-            return main()
-    
-    def delete_user(self):
-        users[self.username]= self.__dict__
-        print (users)
-        user2del= input("Ingrese el nombre de usuario de la cuenta a eliminar: ")
-        if user2del in users.keys():
-            del users[user2del]  #duda 2
-            return users 
+    # Updated Users info available only to Sellers.
+    # Display registered users available only w/employee ID.
+    def customer_register(employees):
+        i=0
+        while i < 3:
+            i += 1
+            employeeId = input("Ingrese su ID:")
+            if employeeId in employees.keys():
+                print(f"\n {employees[employeeId]['name']} Los usuarios registrados son: \n")
+                for user in users.keys():
+                    print(f"\t {user}: Nombre y Apellido: {users[user]['name']} {users[user]['surname']} \n      \t\t| Edad: {users[user]['age']} | Contraseña: {users[user]['password']}\n      \t\t| Contacto: {users[user]['contact']} \n      \t\t| Fecha de Registro: {users[user]['joinDate']} \n")
+                return 
+            else:
+                print(f"\n{employeeId} no está registrado.")
+            if i == 3:
+                print("Se acabaron tu número de intentos. \n")
+                return
+
+
+class Customer(Users):
+    def __init__(self, firstname, surname, ID, password, birthDay, birthMonth, birthYear, email, contact,balance):
+        super().__init__(firstname, surname, ID, password, birthDay, birthMonth, birthYear, email, contact)
+        self.balance=balance
+        self.shoppings=[]
+
+    def age_group(self):
+        contact_info=(self.ID,self.firstname,self.surname,self.email)   
+        for info in users.values():
+                if self.birthYear in range (1901,1926):
+                    mktg ["greatest"].append(contact_info)
+                elif self.birthYear in range (1927,1945):
+                    mktg ["silent"].append(contact_info)
+                elif self.birthYear in range (1946,1964):
+                    mktg ["baby_Boomers"].append(contact_info)
+                elif self.birthYear in range (1965,1976):
+                    mktg ["gen_X"].append(contact_info)
+                elif self.birthYear in range (1977,1983):
+                    mktg ["xennials"].append(contact_info)
+                elif self.birthYear in range (1983,2000):
+                    mktg ["gen_Y"].append(contact_info)
+                elif self.birthYear >= 2000:
+                        mktg ["gen_Z"].append(contact_info)
+
         
-    def contact_us():
+    # instance method to save users info.
+    def save_user(self,users):
+        dob= '{self.birthDay}/{self.birthMonth}/{self.birthYear}'
+        users[self.ID]= {self.firstname,self.surname,
+                        self.__password,dob,self.email,self.contact,
+                        self.balance,self.shoppings}
+        return users
+
+    def contact_us(self):
         pass
 
 class Shipping_info():
@@ -107,55 +176,48 @@ class Shipping_info():
         self.province= province
         self.country= country
 
-# super() builtin returns a proxy object (temporary object of the superclass)
-# allows us to access methods of the base class.
-
 #Child class (Multiple Inheritance)
-class Greatest(Users, Shipping_info):
+class Greatest(Customer, Shipping_info):
+    def advertising(self,dict,A):
+        adrress= {self.street,self.city, self.postalCode, self.province,self.country}
+        if self.ID in dict.keys:
+            print(f'> Enviando contenido {A} a {self.firstname} {self.surname}, {adrress} ')
 
-    def __init__(self):
-        # call super() function to run the __init__() method 
-        # of the parent class inside the child class
-        super().__init__()
+class Silent(Customer, Shipping_info):
+    def advertising(self,dict,B):
+        adrress= {self.street,self.city, self.postalCode, self.province,self.country}
+        if self.ID in dict.keys:
+            print(f'> Enviando contenido {B} a {self.firstname} {self.surname} ')
 
+class BabyBoomers(Customer, Shipping_info):
+    def advertising(self,dict,C):
+        adrress= {self.street,self.city, self.postalCode, self.province,self.country}
+        if self.ID in dict.keys:
+            print(f'> Enviando contenido {C} a {self.firstname} {self.surname} ')
 
-class Silent(Users, Shipping_info):
+class GenX(Customer, Shipping_info):
+    def advertising(self,dict,D):
+        adrress= {self.street,self.city, self.postalCode, self.province,self.country}
+        if self.ID in dict.keys:
+            print(f'> Enviando contenido {D} a {self.firstname} {self.surname} ')
 
-    def __init__(self):
-        # call super() function
-        super().__init__()
+class Xennials(Customer, Shipping_info):
+    def advertising(self,dict,E):
+        adrress= {self.street,self.city, self.postalCode, self.province,self.country}
+        if self.ID in dict.keys:
+            print(f'> Enviando contenido {E} a {self.firstname} {self.surname} ')
 
-class BabyBoomers(Users, Shipping_info):
+class GenY(Customer, Shipping_info):
+    def advertising(self,dict,F):
+        adrress= {self.street,self.city, self.postalCode, self.province,self.country}
+        if self.ID in dict.keys:
+            print(f'> Enviando contenido {F} a {self.firstname} {self.surname} ')
 
-    def __init__(self):
-        # call super() function
-        super().__init__()
-
-class GenX(Users, Shipping_info):
-
-    def __init__(self):
-        # call super() function
-        super().__init__()
-
-class Xennials(Users, Shipping_info):
-
-    def __init__(self):
-        # call super() function
-        super().__init__()
-
-class GenY(Users, Shipping_info):
-
-    def __init__(self):
-        # call super() function
-        super().__init__()
-
-class GenZ(Users, Shipping_info):
-
-    def __init__(self):
-        # call super() function.
-        super().__init__()
-
-
+class GenZ(Customer, Shipping_info):
+    def advertising(self,dict,G):
+        adrress= {self.street,self.city, self.postalCode, self.province,self.country}
+        if self.ID in dict.keys:
+            print(f'> Enviando contenido {G} a {self.firstname} {self.surname} ')
 
 
 

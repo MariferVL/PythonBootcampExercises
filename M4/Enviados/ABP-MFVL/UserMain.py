@@ -1,4 +1,4 @@
-from Users import Users
+from Users import *
 
 
 def main ():
@@ -26,3 +26,4 @@ def main ():
 
 if __name__ == "__main__":
         main()
+        print(Greatest.mro())
