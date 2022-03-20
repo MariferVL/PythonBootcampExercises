@@ -1,7 +1,6 @@
 """ Información clientes """
 
 # Import the re module, which can be used to work with Regular Expressions.
-from optparse import Values
 import re
 import datetime
 from Main_Clientes import costumer_menu
