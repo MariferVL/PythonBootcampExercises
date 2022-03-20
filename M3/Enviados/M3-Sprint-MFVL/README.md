@@ -32,8 +32,7 @@ GitHub: https://github.com/Marifer1111
     <a href="https://github.com/Marifer1111/Ejercicios_Bootcamp/tree/main/M3/Enviados/M3-Sprint-MFVL"><strong>Acceso a Documentos »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/Marifer1111/Ejercicios_Bootcamp/tree/main/M3/Enviados/M3-Sprint-MFVL">Ver Demostración</a>
-    ·
+ 
   </p>
 </div>
 
@@ -58,7 +57,7 @@ GitHub: https://github.com/Marifer1111
     Este proyecto tiene como fin encontrar soluciones a problemas generados por el e-commerce emergente. Para ello fue necesario desarrollar una solución tecnológica que cubra los 
     procesos de negocio y proponer una mejora en la gestión, el control, la seguridad, y 
     disponibilidad de información para el negocio y sus clientes. 
-    El sistema permite presentar <b>roductos</b> <b>omar pedidos</b> y <b>hacer seguimiento</b> de estos y la <b>estión de clientes</b> Además, genera reportes y estadísticas que ayudan a tomar decisiones y mejoran el rendimiento de las empresas, considerando la cantidad de clientes, y la demanda de éstos. 
+    El sistema permite presentar <b>productos</b> <b>tomar pedidos</b> y <b>hacer seguimiento</b> de estos y la <b>gestión de clientes</b> Además, genera reportes y estadísticas que ayudan a tomar decisiones y mejoran el rendimiento de las empresas, considerando la cantidad de clientes, y la demanda de éstos. 
     </summary>
 
 
@@ -75,8 +74,69 @@ GitHub: https://github.com/Marifer1111
 ## Uso
 
 Este programa cuenta con 5 archivos: Bodega,Clientes y Envíos, más 2 menús con drive code para Bodega y Clientes.
+<details>
+  <summary><b>Manejo de bodega</b></summary>
+  <ul>
+    <li><a >Main_Bodega.py inicia el programa de Bodega.py </a></li>
+    <li><a>Información de productos en una bodega virtual.</a></li>
+    <li><a>Funciones:</a></li>
+        <ol>
+              <li><a>Sumar y disminuir el número de unidades por producto.</a></li>
+              <li><a>Agregar nuevos productos. </a></li>
+              <li><a>Quitar productos de la bodega virtual.</a></li>
+              <li><a>Mostrar inventario.</a></li>
+              <li><a>Quitar productos de la bodega virtual.</a></li>
+              <li><a>Verificar si un producto tiene menos de 400 unid.</a></li>
+        </ol>
+  </ul>
+</details>
+<div align="center">
+ <img src="MenuBodega.png" width="400px" height="400px">
+ 
+ <img src="Bodega.png" width="400px" height="400px">
+</div>
 
+<details>
+  <summary><b>Información clientes</b></summary>
+  <ul>
+    <li><a>Main_Clientes.py inicia el programa de Clientes.py </a></li>
+    <li><a>Crear base de datos con información de clientes.</a></li>
+    <li><a>Funciones:</a></li>
+        <ol>
+              <li><a>Agregar nuevos clientes.</a></li>
+              <li><a>Eliminar clientes según nombre de usuario. </a></li>
+              <li><a>Comprar.</a></li>
+              <li><a>Mostrar toda la información por cliente al Empleado.</a></li>
+              <li><a>Mostrar inventario.</a></li>              
+        </ol>
+  </ul>
+</details>
+<div align="center">
+<img src="MenuClientes.png " width="400px" height="400px">
 
+<img src="Clientes.png" width="400px" height="400px">
+</div>
+
+<details>
+  <summary><b>Sistema de envío</b></summary>
+  <ul>
+    <li><a>Envios.py se inicia desde Clientes.py </a></li>
+    <li><a>Crear base de datos con información de clientes.</a></li>
+    <li><a>Funciones:</a></li>
+        <ol>
+              <li><a>Pregunta qué tipo de envío es necesario.</a></li>
+                  <ul>
+                      <li><a>Largo</a></li>
+                      <li><a>Corto</a></li>
+                  </ul>
+              <li><a>Enviar compra a respectiva Bodega según tipo de envío.</a></li>
+              <li><a>Verificar que cada bodega no supere las 500 unidades.</a></li>            
+        </ol>
+  </ul>
+</details>
+<div align="center">
+ <img src="Envios.png" width="400px" height="400px">
+</div>
 
 <p align="left"><a href="#volver">Volver</a></p>
 
