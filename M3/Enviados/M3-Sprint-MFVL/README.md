@@ -3,8 +3,7 @@
 
 <br />
 <div align="center">
-  <a href="https://github.com/Marifer1111/Ejercicios_Bootcamp/tree/main/M%C3%B3dulo%203/Enviados/M3-Sprint-MFVL">
-  </a>
+
 
 <h1 align="center"><b>Sprint</b></h1>
 <h2 align="center"> Desarrollo Final del Módulo 3</h2>
@@ -30,10 +29,10 @@ GitHub: https://github.com/Marifer1111
     </summary>
     <br />
     <br />
-    <a href="https://github.com/Marifer1111/Ejercicios_Bootcamp/tree/main/M%C3%B3dulo%203/Enviados/M3-Sprint-MFVL"><strong>Acceso a Documentos »</strong></a>
+    <a href="https://github.com/Marifer1111/Ejercicios_Bootcamp/tree/main/M3/Enviados/M3-Sprint-MFVL"><strong>Acceso a Documentos »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/Marifer1111/Ejercicios_Bootcamp/tree/main/M%C3%B3dulo%203/Enviados/M3-Sprint-MFVL">Ver Demostración</a>
+    <a href="https://github.com/Marifer1111/Ejercicios_Bootcamp/tree/main/M3/Enviados/M3-Sprint-MFVL">Ver Demostración</a>
     ·
   </p>
 </div>
