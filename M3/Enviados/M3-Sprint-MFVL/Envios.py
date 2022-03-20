@@ -3,6 +3,16 @@
 from Bodega import *
 from Clientes import *
 
+""" Sistema de envío 
+● El sistema de envío debe ser un programa que pregunta qué tipo de envío es necesario (Rápido 
+o largo)
+● Si es un envío a una distancia de más de 1.000 km es considerado largo. Si es igual o menor a la 
+distancia de 1.000 km es considerado rápido. 
+● En el caso que sea un envío rápido debe enviarse a una Bodega_A, caso contrario debe ser 
+almacenado a una Bodega_B.
+● El programa debe verificar que cada bodega no supere las 500 unidades """
+
+
 Bodega_A={}
 Bodega_B={}
 

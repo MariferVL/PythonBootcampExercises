@@ -1,5 +1,16 @@
-from Bodega import *
+from Bodega import productos
 from Clientes import *
+
+employees={"emp1" : {"name": "Jim", "username": "Sturgess","age": 35},
+        "emp2" :{"name": "Ryan", "username": "Gosling", "age": 35},
+        "emp3" :{"name": "Violeta", "username": "Parra ", "age": 49},
+        "emp4" :{"name": "Gato", "username": "Alquinta", "age": 35},
+        "emp5" :{"name": "Anne", "username": "Hathaway", "age": 39},
+        "emp6" :{"name": "Hae-Jo", "username": "Chang", "age": 35},
+        "emp7" :{"name": "Willy", "username": "Rodríguez", "age": 44},
+        "emp8" :{"name": "Adele", "username": "Blue", "age": 33},
+        "emp9" :{"name": "Jhon", "username": "Lennon","age": 40},
+        "emp10" :{"name": "Ed", "username": "Sheeran","age": 31}}
 
 Bag={}
 
@@ -7,15 +18,15 @@ Bag={}
 #Step 2: Request purchase by customer id, product id and the units (1 by default) to buy.
 #Identify customer.
 def log_in():
-    user_id= input('> Ingrese su Nombre de Usuario/ID:  ')
-    if user_id in users.keys():
-        print(f'!Bienvenid@ {users[user_id]}!')
-        return user_id
-    elif user_id not in users.keys():
+    username= input('> Ingrese su Nombre de Usuario/ID:  ').capitalize
+    if username in users.keys():
+        print(f'!Bienvenid@ {users[username]}!')
+        return username
+    elif username not in users.keys():
         print("Aún no estás registrad@.")           
         print("Lo dirigiremos a sección Registro.")
         print('')
-        return sign_in()
+        return save_user()
 
 def fill_bag():
     user_bag= {}
