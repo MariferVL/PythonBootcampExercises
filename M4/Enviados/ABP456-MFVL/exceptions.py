@@ -55,7 +55,7 @@ def indexError():
 
 def keyError():
     balance= {'Amanel': 110000000, 'Flame': 22000000, 'SS': 33333333}
-    customer= input('\n> Ingrese nombre de usuario de cliente: ').capitalize()
+    customer= input('\n> Ingrese nombre de usuario de cliente: ')
     try:
         print(f'{customer} tiene ${balance[customer]} de saldo disponible en su cuenta.')
     except KeyError:
