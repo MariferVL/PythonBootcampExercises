@@ -134,13 +134,14 @@ limit 1);
 SELECT nombre_producto as "Producto con mayor Stock", stock FROM producto WHERE(stock = (SELECT max(stock) FROM producto));            
 
 # Qué color de producto es más común en nuestra tienda.
-SELECT color, count(color) as "Productos por categoría" from producto
-group by color
-having count(color)=
-(SELECT count(color) from producto
-group by color
-order by color desc
-limit 1);  
+SELECT color, count(color) AS "Color mas común" FROM producto
+GROUP BY color
+HAVING count(*)=
+(SELECT tabla_temp.col_aux FROM  
+(SELECT COUNT(color) AS col_aux , color
+FROM producto
+GROUP BY color
+ORDER BY count(color) DESC LIMIT 1)tabla_temp);  
           
 # Cuál o cuáles son los proveedores con menor stock de productos.
 Select nombre_corporativo, sum(stock) as "Stock Total" 
@@ -153,10 +154,10 @@ order by "Stock Total"  ASC;
 #Cambien la categoría de productos más popular por ‘Electrónica y computación’.
 
 # Categoría más vendida(menor stock)= TV
-Select categoria, sum(stock) as "Stock Total" 
+Select categoria, sum(stock) as stock_total 
 from producto
 group by categoria 
-order by "Stock Total"  asc;
+order by stock_total  DESC;
 
 UPDATE `db1`.`producto` SET `categoria` = 'Electrónica y computación' 
 WHERE (`idProducto` = '1014');
