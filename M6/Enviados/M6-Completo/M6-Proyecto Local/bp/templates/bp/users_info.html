@@ -1,0 +1,32 @@
+{% extends 'bp/base.html'%}
+
+<title>{% block title %}Info Usuarios-Comprando Presentes{% endblock %}</title>
+
+{% block content %}
+
+<div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="section-title text-center position-relative pb-3 mb-4 mx-auto" style="max-width: 600px;">
+            <h5 class="fw-bold text-primary text-uppercase">Información de Usuarios</h5>
+            <h1 class="mb-0">Aquí encontrarás datos básicos de nuestros usuarios.</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.6s">
+                {% for user in users %}
+                    <div class="testimonial-item bg-light my-4" style="display: flex; flex-direction: row; flex-wrap: wrap">
+                            <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5" >
+                                {% comment %} <img class="img-fluid rounded" src={% static '"images/testimonial-1.jpg"' %} style="width: 60px; height: 60px;" > {% endcomment %}
+                                <div class="ps-4">
+                                    <h4 class="text-primary mb-1">{{user.username}}</h4>
+                                    <small><br> Email: {{user.email}}</small>
+                                    <small><br> Nombre: {{user.first_name }}</small>
+                                    <small><br> Apellido: {{user.last_name }}</small>
+                                </div>
+                            </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

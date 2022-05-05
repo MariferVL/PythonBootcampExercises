@@ -1,0 +1,239 @@
+users = {'Tamara': 
+                {'name': 'Tamara', 
+                'surname': 'Neira', 
+                "age": 35, 
+                "gender": "F", 
+                "password": "LocaLoca15", 
+                "email": "tam@presentes.com", 
+                "contact": 987654321, 
+                "joinDate": "15/11/1986"},
+        'Pau': 
+                {'name': 'Paula', 
+                'surname': 'Ramirez', 
+                "age": 24, 
+                "gender": "F", 
+                "password": "laliR820", 
+                "email": "pau@presentes.com", 
+                "contact": 912345678, 
+                "joinDate": "08/01/1998"},
+        'Flo': 
+                {'name': 'Florencia', 
+                'surname': 'Miralla', 
+                "age": 28, 
+                "gender": "F", 
+                "password": "Flor3c3r", 
+                "email": "flo@presentes.com", 
+                "contact": 923456789, 
+                "joinDate": "31/01/1994"},
+        'Marete': 
+                {'name': 'Mario', 
+                'surname': 'Sonrisa', 
+                "age": 35, 
+                "gender": "M", 
+                "password": "Mario1135", 
+                "email": "marete@presentes.com", 
+                "contact": 934567891, 
+                "joinDate": "06/11/1984"},
+        'Dany': 
+                {'name': 'Daniel', 
+                'surname': 'Vargas', 
+                "age": 24, 
+                "gender": "M", 
+                "password": "Gemini33", 
+                "email": "dany@presentes.com", 
+                "contact": 945678912, 
+                "joinDate": "19/07/1999"},
+        'Ama': 
+                {'name': 'Amanel', 
+                'surname': 'LaVida', 
+                "age": 35, 
+                "gender": "F", 
+                "password": "AmaVida11", 
+                "email": "ama@presentes.com", 
+                "contact": 956789123, 
+                "joinDate": "11/11/1986"},
+        'Teddy': 
+                {'name': 'Ed', 
+                'surname': 'Sheeran', 
+                "age": 35, 
+                "gender": "M", 
+                "password": "Upekkha33", 
+                "email": "sam@presentes.com", 
+                "contact": 967891234, 
+                "joinDate": "22/11/1986"},
+        }
+
+  Posts
+
+  Soy Yo 
+
+"Me caí, me paré, caminé, me subí
+Me fui contra la corriente y también me perdí
+Fracasé, me encontré, lo viví y aprendí
+Cuando te pegas fuerte más profundo es el beat
+Sigo bailando y escribiendo mis letras
+Sigo cantando con las puertas abiertas
+Atravesando todas estas tierras
+Y no hay que viajar tanto pa' encontrar la respuesta
+Y no te preocupes si no te aprueban
+Cuando te critiquen, tú solo di
+Soy yo "
+
+by Bomba Estereo
+
+La vida viene y va
+
+"La vida viene y va.
+No me importa si es mi último día
+Voy a disfrutar, la vida viene y va
+Hay tanto cambio inesperado
+Pero me voy adaptando
+La vida es prestada
+Haz lo que más amas con cabeza alzada."
+
+by Josue Alaniz
+
+
+No se Rompe
+
+"No todo lo que brilla es oro ni cobre
+No hay pena que dure ni día que sobre
+Puede que duela mucho con o sin razones
+Por más que te digan que sí
+El corazón no se rompe
+El corazón no se rompe
+A mí, del susto
+No me van a matar
+El año pasado decían que el mundo entero, enterito
+Se iba a acabar
+Alguna vez juré
+Morirme por ella
+Y aquí me tienen bailando
+Dejando huella"
+
+by  Álex Ferreira
+
+
+Say
+
+"Have no fear for giving in
+Have no fear for giving over
+You better know that in the end
+It's better to say too much
+Than never to say what you need to say again
+Even if your hands are shaking
+And your faith is broken
+Even as the eyes are closing
+Do it with a heart wide open, a wide heart"
+
+by John Mayer
+
+Upekkha
+
+"Mucho ruido en mi,
+mucho ruido en vos, 
+mucho ruido en a ciudad.
+Jugamos al sí,
+ jugamos al no 
+y un disfraz ya es natural."
+
+by Marete Sonrisa
+
+
+Soy Yo
+
+"Me caí, me paré, caminé, me subí
+Me fui contra la corriente y también me perdí
+Fracasé, me encontré, lo viví y aprendí
+Cuando te pegas fuerte más profundo es el beat
+Sigo bailando y escribiendo mis letras
+Sigo cantando con las puertas abiertas
+Atravesando todas estas tierras
+Y no hay que viajar tanto pa' encontrar la respuesta
+Y no te preocupes si no te aprueban
+Cuando te critiquen, tú solo di
+Soy yo "
+
+by Bomba Estereo
+
+Tu
+
+"Tanta gente en el planeta
+Pretendiendo ser lo que no son
+Y disfrazadas con caretas...
+...Y no quiero criticar por criticar
+Solamente te vi y me puse a pensar
+Que tú eres simplemente tú
+Sin ninguna pretensión
+Te robas mi corazón
+Tu sonrisa vale un millón
+Y tú ni te enteras
+Me gustaría que en mis ojos te vieras
+Me gustaría que tú te vieras
+Para que entendieras"
+
+by Pitizion
+
+
+Tu Valor
+
+"Estás tan lejos del lugar donde quedo tu corazón
+Y pasas tanto tiempo preguntándote la razón
+La razón
+Uhhh uhhh uhhh
+Si hay tantas cosas que desviarte de tu dirección
+Quizás habría que dejar de pretender el control
+Suelta tu temor
+Deja que la vida muestre su dolor
+Nada bueno queda si no ves tu valor
+Tu valor"
+
+by Benjamín Walker
+
+
+Duelo
+
+"Sin dolor no te haces feliz
+Sin dolor no te haces feliz
+Sin amor
+Tiernamente"
+
+by La Ley
+
+
+
+Vive
+
+"Los encuentros son respuestas a preguntas
+que tal vez no nos hicimos todavía.
+Y mientras somos ese encuentro
+ya madura la pregunta va creando poesía.
+Hasta que el presente sea la respuesta revelada
+Así es que de repente todas las preguntas van dejando de importar,
+Entonces te digo
+
+Vive el presente, sencillamente,
+dejá que el tiempo vaya haciendo su proceso.
+Vive el presente, sencillamente
+Deja al encuentro resolver todo este enigma comunicacional. "
+
+by Ivonne Guzman
+
+
+
+Alma
+
+Pero ya, aprendí
+Que de la orilla es difícil saltar
+Pero me lancé, me atreví a nadar
+Y estoy en medio de la hermosa soledad
+Para conectarme con el alma
+Voy entregarme a esta noche sin escapar
+Voy a invitar a mi soledad
+Y sentir el corazón hoy, hoy hoy hoy
+Yo decidí acurrucar entre mis manos la soledad
+Yo decidí acurrucar este dolor
+Para conectarme con el alma
+Y abrazar mi inmensa soledad
+
+by Javiera Mena
