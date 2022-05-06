@@ -51,7 +51,7 @@
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
         <div class="container">
             <a href={% url 'home' %} class="navbar-brand p-0">
-                <h1 class="m-0"><img src="{% static 'images/favicon-32x32.png' %}" alt="Logo"> Comprando Presentes</h1>
+                <h1 class="m-0" style="font-size: 33px !important;"><img src="{% static 'images/favicon-32x32.png' %}" alt="Logo" > Comprando Presentes</h1>
             </a>
             <button
                 class="navbar-toggler"
@@ -93,29 +93,29 @@
                             </ul>
                         </li>
                         {% if user.is_authenticated %}
-                            <li class="nav-item">
-                                <a class="top-menu" class= 'nav-item nav-link active singup' style="padding-right: 11px">¡Bien venid@! {{ user.username }} </a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a href="/#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src={% static 'images/sesion.jpg' %} alt="user" width="32" height="32" class="rounded-circle">
-                                </a>
-                                <ul class="dropdown-menu text-small profile" aria-labelledby="dropdownUser1">
-                                    <li><a class="dropdown-item" href={% url 'profile' %}>Perfil</a></li>
-                                    <li><a class="dropdown-item" href={% url 'config' %}>Configuración</a></li>
-                                    <li><a class="dropdown-item" href={% url 'post-it' %}>A Postear!</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="{% url 'logout' %}">Cerrar Sesión</a></li>
-                                </ul>
-                            </li>
+                        <li class="nav-item">
+                            <a class= 'nav-link'>¡Bien venid@! {{ user.username }} </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="/#" class="nav-link dropdown-toggle" id="dropdownUser1"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src={% static 'images/sesion.png' %} alt="user" width="32" height="32" class="rounded-circle">
+                            </a>
+                            <ul class="dropdown-menu m-0 profile" aria-labelledby="dropdownUser1">
+                                <li><a class="dropdown-item" href={% url 'profile' %}>Perfil</a></li>
+                                <li><a class="dropdown-item" href={% url 'config' %}>Configuración</a></li>
+                                <li><a class="dropdown-item" href={% url 'post-it' %}>A Postear!</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="{% url 'logout' %}">Cerrar Sesión</a></li>
+                            </ul>
+                        </li>
                         {% else %}
-                            <li class="nav-item ">
-                                <a  href="{% url 'login' %}" type="button" class="nav-link">{% include './icons/door-open.svg' %}</a>
-                            <li class="nav-item">
-                                <a href="{% url 'signup' %}" type="button" class="nav-link">{% include './icons/person-plus.svg' %}</a>
+                        <li class="nav-item ">
+                            <a  href="{% url 'login' %}" type="button" class="nav-link">{% include './icons/door-open.svg' %}</a>
+                        <li class="nav-item">
+                            <a href="{% url 'signup' %}" type="button" class="nav-link">{% include './icons/person-plus.svg' %}</a>
                         {% endif %} 
                     </ul>
                 </div>
