@@ -1,0 +1,40 @@
+{% extends 'bp/base.html'%}
+{% load static %}
+
+<title>{% block title %}Comentarios-Comprando Presentes{% endblock %}</title>
+
+{% block content %}
+    <!-- Contact Wall Start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="section-title text-center position-relative pb-3 mb-4 mx-auto" style="max-width: 600px;">
+                <h5 class="fw-bold text-primary text-uppercase">Muro de Comentarios </h5>
+            </div>
+
+            <div class="section-title text-center position-relative pb-3 mb-4 mx-auto" style="max-width: 600px;">
+                <h1 class="mb-0">Consultas y sugerencias dejadas por nuestra comunidad.</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.3s" style="padding-bottom: 66px;"> 
+                {% for message in messages %}
+                <div class="testimonial-item bg-light my-4" style="display: flex; flex-direction: row; flex-wrap: wrap">
+                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                        <img class="img-fluid rounded" src="{% static 'images/contact.png' %}" style="width: 60px; height: 60px;" >
+                        <div class="ps-4" >
+                            <time id= "published" class="date" style="font-size: 11px;">
+                                {{ message.sending_date }}
+                            </time>
+                            <h4 class="text-primary mb-1">{{message.name}}</a></h4>
+                            <small>{{message.sender}}</small>
+                            <h5 class="text-primary mb-1">{{message.subject}}</h5>
+                        </div>
+                    </div>
+                    <div class="pt-4 pb-5 px-5">{{message.message}}</div>                                  
+                </div> 
+                {% endfor %}        
+            </div>
+    <!-- Contact Wall End -->
+
+
+
+{% endblock %}
+

@@ -1,0 +1,57 @@
+
+
+1. activate venv:
+        call myvenv/Scripts/activate
+
+2. Dump Your Django Database and Load It into a New Project:
+             I) python manage.py dumpdata --natural-foreign --natural-primary -e contenttypes -e auth.Permission --indent 2 > dump.json
+
+            II) Easier Fix: You can actually change the encoding of the fixture file
+             that is output by dumpdata in Visual Studio Code without having to make 
+             a whole new file. If you look down at the bottom of your view screen for VSCode
+              in the bottom right status bar, there is an option to change or select the encoding (UTF).
+             Your file needs to be set to UTF-8. Now save the file again.
+
+
+
+3. mysqlclient is a native driver. It’s the recommended choice:
+         pip install mysqlclient
+
+4.  (Optional) using Django’s timezone support:
+        mysql_tzinfo_to_sql
+
+5.Django expects the database to support Unicode (UTF-8 encoding) 
+    Create your database using the command-line tools and this SQL that will 
+    ensures all tables and columns will use UTF-8 by default:
+        CREATE DATABASE <dbname> CHARACTER SET utf8;
+
+6. Connection settings are used in this order:
+
+    I) OPTIONS.
+    II) NAME, USER, PASSWORD, HOST, PORT
+    III) MySQL option files.
+    
+             # settings.py
+            DATABASES = {
+                'default': {
+                    'ENGINE': 'django.db.backends.mysql',
+                    'NAME': 'your_database',  
+                    'USER': 'root',  
+                    'PASSWORD': 'your_password',  
+                    'HOST': '127.0.0.1',
+                    'PORT': '3306',  
+                    default-character-set = utf8,
+                    'OPTIONS': {
+                        'read_default_file': '/path/to/my.cnf',
+                    },
+                }
+            }
+
+7. Load It into a New Project:            
+        I) In json.py (path:\Python\Python310\lib\site-packages\django\core\serializers\json.py)
+        Change this: stream_or_string = stream_or_string.decode()    
+        to this:  stream_or_string = stream_or_string.decode("ISO-8859-1") 
+        II) python manage.py migrate
+        III) python manage.py loaddata dump.json
+
+

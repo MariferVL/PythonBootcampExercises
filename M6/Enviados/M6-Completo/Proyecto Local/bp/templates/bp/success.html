@@ -1,0 +1,36 @@
+{% extends 'bp/base.html' %}
+{% load static %}
+
+
+<title>{% block title %}Mensaje recibido{% endblock %}</title>
+
+
+{% block content %}
+
+    <div class="container-fluid position-relative p-0 py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5 ">
+            <img class="w-100" src="{% static 'images/msg_received.jpg' %}" style="object-fit: cover;opacity: 0.6;" alt="Image">
+                        <div class="carousel-caption d-flex flex-column justify-content-center">
+                            <div class="p-3" style="max-width: 900px;">
+                                <h1 class="text-white text-uppercase mb-3 animated slideInDown" style="padding-bottom: 44px !important;">Mensaje Recibido Exitosamente</h1>
+                                
+                                <h5 class="text-white mb-3 animated zoomIn" style="padding-right:488px !important;padding-top: 88px !important;">Un integrante de nuestra área de atención responderá a tu solicitud lo más pronto posible</h5>
+                                <h3 class="text-white mb-3 animated slideInDown" style="padding-top: 100px !important;padding-bottom: 50px !important;">¡Gracias por contactarnos!</h3>
+                            </div>
+                        </div>
+            {% comment %} <div class="section-title text-center position-relative pb-3 mb-4 mx-auto" style="max-width: 600px;">
+                <h1 class="fw-bold text-primary text-uppercase">Mensaje Recibido Exitosamente</h1>
+                <h5 class="mb-0">Un integrante de nuestra área de atención responderá a tu solicitud lo más pronto posible</h5>
+            </div>
+            <img class="" src="{% static 'images/msg_received.jpg' %}" style="object-fit: cover;opacity: 0.8;" alt="Message Received">
+            <div class="section-title text-center position-relative pb-3 mb-4 mx-auto" style="max-width: 600px;">
+            <h3 class="fw-bold text-primary text-uppercase">¡Gracias por contactarnos!</h3>
+            <h3 class="fw-bold text-primary text-uppercase">Que tengas un buen día.</h3>
+            </div> {% endcomment %}
+        </div>
+        <div class="container py-5 ">
+            <a class="btn send animated slideInLeft"  href="{% url 'message_list' %}">Ver Comentarios</a>
+        </div>
+    </div>
+    
+{% endblock %}

@@ -1,0 +1,84 @@
+{% extends 'bp/base.html' %}
+
+<title>{% block title %}Contacto - Comprando Presentes{% endblock %}</title>
+
+
+{% block content %}
+
+<!-- Contact Start -->
+<div id="contact" class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+            <h5 class="fw-bold text-primary text-uppercase">Contáctanos</h5>
+            <h1 class="mb-0">Disponemos de diferentes plataformas para aclarar tus dudas o saber de ti.</h1>
+        </div>
+        <div class="row g-5 mb-5">
+            <div class="col-lg-4">
+                <div class="d-flex align-items-center wow fadeIn" data-wow-delay="0.1s">
+                    <div class="bg-primary d-flex align-items-center justify-content-center rounded"
+                        style="width: 60px; height: 60px;">
+                        <i class="fa fa-phone-alt text-white"></i>
+                    </div>
+                    <div class="ps-4">
+                        <h5 class="mb-2">Llámanos</h5>
+                        <h4 class="text-primary mb-0">+56 9 903 03 456</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 align-items-center ">
+                <div class="d-flex align-items-center wow fadeIn" data-wow-delay="0.4s">
+                    <div class="bg-primary d-flex align-items-center justify-content-center rounded"
+                        style="width: 60px; height: 60px;">
+                        <i class="fa fa-envelope-open text-white"></i>
+                    </div>
+                    <div class="ps-4">
+                        <h5 class="mb-2">Correo electrónico</h5>
+                        <h4 class="text-primary mb-0">info@presentes.cl</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="d-flex align-items-center wow fadeIn" data-wow-delay="0.8s">
+                    <div class="bg-primary d-flex align-items-center justify-content-center rounded"
+                        style="width: 60px; height: 60px;">
+                        <i class="fa fa-map-marker-alt text-white"></i>
+                    </div>
+                    <div class="ps-4">
+                        <h5 class="mb-2">Visita nuestros Centros</h5>
+                        <h4 class="text-primary mb-0"></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row g-5 justify-content-center">
+            <div class="col-lg-6 wow slideInUp" data-wow-delay="0.3s">
+                <form method="post"> {% csrf_token %}
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <input type="text" class="form-control border-0 bg-light px-4" placeholder="Tu Nombre" style="height: 55px;" id="id_subject" type="text" name="name" maxlength="100" required>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="email" class="form-control border-0 bg-light px-4" placeholder="Tu Email" style="height: 55px;" type="email" name="sender" id="id_sender" required>
+                        </div>
+                        <div class="col-12">
+                            <input type="text" class="form-control border-0 bg-light px-4" placeholder="Asunto" style="height: 55px;" id="id_subject" type="text" name="subject" maxlength="100" required>
+                        </div>
+                        <div class="col-12">
+                            <textarea class="form-control border-0 bg-light px-4 py-3" rows="4" placeholder="Mensaje" name="message" id="id_message" required></textarea>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="id_cc_myself">Deseo una copia:</label>
+                            <input type="checkbox" name="cc_myself" id="id_cc_myself">
+                        </div> 
+                        <div class="col-12">
+                            <button class="btn btn-primary w-100 py-3" type="submit">Enviar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Contact End -->
+
+{% endblock %}

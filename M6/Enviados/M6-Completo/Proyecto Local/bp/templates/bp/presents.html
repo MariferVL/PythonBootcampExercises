@@ -1,0 +1,41 @@
+{% extends 'bp/base.html'%}
+{% load static %}
+
+<title>{% block title %}Presentes-Comprando Presentes{% endblock %}</title>
+
+{% block content %}
+
+        <!-- Presents/Services Start -->
+        <div id="presents" class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                    <h5 class="fw-bold text-primary text-uppercase">Presentes</h5>
+                    <h1 class="mb-0">Los mejores regalos para disfrutar cada instante.</h1>
+                </div>
+                <div class="row g-5">
+                    {% for present in presents %}
+                    <div id="enjoy" class="col-lg-4 wow slideInUp" data-wow-delay="0.3s"  style="display: flex; flex-direction: row; flex-wrap: wrap">        
+                            <div class="services-item bg-light rounded overflow-hidden">
+                                <div class="services-img position-relative overflow-hidden">
+                                    <img class="img-fluid" src="{% static present.img_path %}" alt="Present_Img">
+                                    <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4"
+                                        href="">{{ present.price}}</a>
+                                </div>
+                                <div class="p-4">
+                                    <div class="d-flex mb-3">
+                                        <small class="me-3"><i class="far fa-user text-primary me-2"></i>{{ present.guide_name}}</small>
+                                        <i class="far fa-calendar-alt text-primary me-2"></i><p style="font-size:68%;">{{ present.workshop_date}}</p></small>
+                                    </div>
+                                    <h4 class="mb-3">{{ present.name}}</h4>
+                                    <p>{{ present.description}}</p>
+                                    <button type="submit" class="btn btn-primary btn-lg">Comprar</button>
+                                </div>
+                            </div>                        
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <!-- Presents/Services End -->
+{% endblock %}
+
