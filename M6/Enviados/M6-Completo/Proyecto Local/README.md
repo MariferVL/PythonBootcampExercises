@@ -79,7 +79,7 @@ administrativo de Django.
 
 
 ## Uso
-
+La base de datos d este proyecto está configurada para MySQL y además cuenta con un archivo (dump.json) para cargar la base de datos completa en un nuevo proyecto o un nuevo motor de base de datos.
 El proyecto cuenta con 3 secciones principales que son de libre accceso al público: Registro en nuestra comunidad web, Compra de Servicios y Post-its.
 <details>
   <summary><b>Registro</b></summary>
@@ -94,9 +94,9 @@ El proyecto cuenta con 3 secciones principales que son de libre accceso al públ
   </ul>
 </details>
 <div align="center">
-  <img src="/bp/static/images/signUpPage.png " width="600px" height="400px">
+  <img src="bp/static/images/signUpPage.png " width="600px" height="400px">
 
-  <img src="/bp/static/images/signUpCode.png" width="600px" height="400px">
+  <img src="bp/static/images/signUpCode.png" width="600px" height="400px">
 </div>
 <br />
 <details>
@@ -122,9 +122,9 @@ El proyecto cuenta con 3 secciones principales que son de libre accceso al públ
 </details>
 
 <div align="center">
-  <img src="/bp/static/images/post-it-Ex.png" width="600px" height="400px">
+  <img src="bp/static/images/post-it-Ex.png" width="600px" height="400px">
  
-  <img src="/bp/static/images/createpost.png" width="600px" height="400px">
+  <img src="bp/static/images/createpost.png" width="600px" height="400px">
 </div>
  <br/>
 
