@@ -1,0 +1,1125 @@
+[
+{
+  "model": "auth.group",
+  "fields": {
+    "name": "Público",
+    "permissions": [
+      [
+        "add_user",
+        "auth",
+        "user"
+      ],
+      [
+        "change_user",
+        "auth",
+        "user"
+      ],
+      [
+        "delete_user",
+        "auth",
+        "user"
+      ],
+      [
+        "add_comment",
+        "bp",
+        "comment"
+      ],
+      [
+        "change_comment",
+        "bp",
+        "comment"
+      ],
+      [
+        "delete_comment",
+        "bp",
+        "comment"
+      ],
+      [
+        "view_comment",
+        "bp",
+        "comment"
+      ],
+      [
+        "add_contact",
+        "bp",
+        "contact"
+      ],
+      [
+        "view_contact",
+        "bp",
+        "contact"
+      ],
+      [
+        "add_post",
+        "bp",
+        "post"
+      ],
+      [
+        "change_post",
+        "bp",
+        "post"
+      ],
+      [
+        "view_post",
+        "bp",
+        "post"
+      ],
+      [
+        "view_presents",
+        "bp",
+        "presents"
+      ],
+      [
+        "view_contenttype",
+        "contenttypes",
+        "contenttype"
+      ]
+    ]
+  }
+},
+{
+  "model": "auth.group",
+  "fields": {
+    "name": "Team",
+    "permissions": [
+      [
+        "view_logentry",
+        "admin",
+        "logentry"
+      ],
+      [
+        "view_group",
+        "auth",
+        "group"
+      ],
+      [
+        "view_permission",
+        "auth",
+        "permission"
+      ],
+      [
+        "add_user",
+        "auth",
+        "user"
+      ],
+      [
+        "change_user",
+        "auth",
+        "user"
+      ],
+      [
+        "view_user",
+        "auth",
+        "user"
+      ],
+      [
+        "delete_comment",
+        "bp",
+        "comment"
+      ],
+      [
+        "view_comment",
+        "bp",
+        "comment"
+      ],
+      [
+        "view_contact",
+        "bp",
+        "contact"
+      ],
+      [
+        "add_post",
+        "bp",
+        "post"
+      ],
+      [
+        "change_post",
+        "bp",
+        "post"
+      ],
+      [
+        "delete_post",
+        "bp",
+        "post"
+      ],
+      [
+        "view_post",
+        "bp",
+        "post"
+      ],
+      [
+        "add_presents",
+        "bp",
+        "presents"
+      ],
+      [
+        "change_presents",
+        "bp",
+        "presents"
+      ],
+      [
+        "delete_presents",
+        "bp",
+        "presents"
+      ],
+      [
+        "view_presents",
+        "bp",
+        "presents"
+      ],
+      [
+        "add_contenttype",
+        "contenttypes",
+        "contenttype"
+      ],
+      [
+        "change_contenttype",
+        "contenttypes",
+        "contenttype"
+      ],
+      [
+        "delete_contenttype",
+        "contenttypes",
+        "contenttype"
+      ],
+      [
+        "view_contenttype",
+        "contenttypes",
+        "contenttype"
+      ],
+      [
+        "view_session",
+        "sessions",
+        "session"
+      ]
+    ]
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$320000$QPR2zX1GEOMjdJZPET20S1$Ts+Y/geI58+Q/7Bx7p7a89b/o+SrhHUbblfq8hFTav8=",
+    "last_login": "2022-05-18T00:09:10.289Z",
+    "is_superuser": true,
+    "username": "Marifer",
+    "first_name": "",
+    "last_name": "",
+    "email": "mfvl.1186@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2022-05-10T03:23:13.710Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "LocaLoca15",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Tam",
+    "first_name": "Tamara",
+    "last_name": "Neira",
+    "email": "tam@presentes.cl",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2001-11-15T00:00:00Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "laliR820",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Pau",
+    "first_name": "Paula",
+    "last_name": "Ramirez",
+    "email": "pau@presentes.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2020-04-16T00:00:00Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "Flor3c3r",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Flo",
+    "first_name": "Florencia",
+    "last_name": "Miralla",
+    "email": "flo@presentes.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2020-04-20T00:00:00Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "Gemini33",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Dany",
+    "first_name": "Daniel",
+    "last_name": "Vargas",
+    "email": "dany@presentes.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-11-26T00:00:00Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "AmaVida11",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Ama",
+    "first_name": "Amanel",
+    "last_name": "LaVida",
+    "email": "ama@presentes.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2019-11-12T00:00:00Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "Upekkha33",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Teddy",
+    "first_name": "Ed",
+    "last_name": "Sheeran",
+    "email": "ed@presentes.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2018-05-14T00:00:00Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "Vianny44",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Vianny",
+    "first_name": "Vianny",
+    "last_name": "Vargas",
+    "email": "vianny@presentes.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2022-04-14T00:00:00Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "Ara4343",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Ara",
+    "first_name": "Aracely",
+    "last_name": "Guerrero",
+    "email": "aracely@presentes.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2022-04-14T00:00:00Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "29d8l100lzw75ly6y7e3g5xlf1mu12dq",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQRP-FsyGAQBeP3v0Gwi4bqRpISnsy_rs06UEzt3lv5i1i2tYSt85LnLO4CC1Ovx0menLdQX6kem-SWl2XGeWuyIN2eWuZX9fD_TsoqZexJgMZjMegkmHjA-QzkzaoHTtQVjk9AlYzknKTwgCcJqeGgd4Cofh8AcLCNwE:1nr7FW:FfaSz5qOoWUpS01NM--j9tRBCn3cK056yJdE5yWvyuo",
+    "expire_date": "2022-06-01T00:09:10.475Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "2fkkmcv97it090nyb62s58sypiqtkjod",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQRP-FsyGAQBeP3v0Gwi4bqRpISnsy_rs06UEzt3lv5i1i2tYSt85LnLO4CC1Ovx0menLdQX6kem-SWl2XGeWuyIN2eWuZX9fD_TsoqZexJgMZjMegkmHjA-QzkzaoHTtQVjk9AlYzknKTwgCcJqeGgd4Cofh8AcLCNwE:1npbtN:TZedotNtmfrzfUEw4hF8lxzoH7jRNEHaQSJRz-RTr4Q",
+    "expire_date": "2022-05-27T20:28:05.404Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "77vf79oo8cabwrvkw85fls75eb1m4jlh",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQRP-FsyGAQBeP3v0Gwi4bqRpISnsy_rs06UEzt3lv5i1i2tYSt85LnLO4CC1Ovx0menLdQX6kem-SWl2XGeWuyIN2eWuZX9fD_TsoqZexJgMZjMegkmHjA-QzkzaoHTtQVjk9AlYzknKTwgCcJqeGgd4Cofh8AcLCNwE:1noGTJ:Qd5Md7WvmbtP60I_39PqerHoRUYKI7FdIK7fplq3pw8",
+    "expire_date": "2022-05-24T03:23:37.512Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "br2d1396tfmvrs9j1i903dgi6ci77qnq",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQRP-FsyGAQBeP3v0Gwi4bqRpISnsy_rs06UEzt3lv5i1i2tYSt85LnLO4CC1Ovx0menLdQX6kem-SWl2XGeWuyIN2eWuZX9fD_TsoqZexJgMZjMegkmHjA-QzkzaoHTtQVjk9AlYzknKTwgCcJqeGgd4Cofh8AcLCNwE:1nov8G:yrcV2ZZCDGcz5jnfgCYY_5YN2XUVgCmdRnAtklab8Cs",
+    "expire_date": "2022-05-25T22:48:36.541Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "c0zk2gkceqcjgrf68x2xu4gm1w999m6i",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQRP-FsyGAQBeP3v0Gwi4bqRpISnsy_rs06UEzt3lv5i1i2tYSt85LnLO4CC1Ovx0menLdQX6kem-SWl2XGeWuyIN2eWuZX9fD_TsoqZexJgMZjMegkmHjA-QzkzaoHTtQVjk9AlYzknKTwgCcJqeGgd4Cofh8AcLCNwE:1nqeaI:bU3lP3XW_4kYEX_DTGm7YdCH89zqOhSOLiaX_mzBqrQ",
+    "expire_date": "2022-05-30T17:32:42.897Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "tcn757kbyri15mzuijhznek1hnubsahm",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQRP-FsyGAQBeP3v0Gwi4bqRpISnsy_rs06UEzt3lv5i1i2tYSt85LnLO4CC1Ovx0menLdQX6kem-SWl2XGeWuyIN2eWuZX9fD_TsoqZexJgMZjMegkmHjA-QzkzaoHTtQVjk9AlYzknKTwgCcJqeGgd4Cofh8AcLCNwE:1npA9h:u3GhmVsKA3loyCrwb21RTesrq-p1ESAZRVTjxQkacng",
+    "expire_date": "2022-05-26T14:51:05.188Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "y7m8nruzshzqhseulg0glkplu2moh6nf",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQRP-FsyGAQBeP3v0Gwi4bqRpISnsy_rs06UEzt3lv5i1i2tYSt85LnLO4CC1Ovx0menLdQX6kem-SWl2XGeWuyIN2eWuZX9fD_TsoqZexJgMZjMegkmHjA-QzkzaoHTtQVjk9AlYzknKTwgCcJqeGgd4Cofh8AcLCNwE:1npCTq:soo03DIPu3g9N4pyBK9xlJ8dbmavtr2cTUgP1BpjlYY",
+    "expire_date": "2022-05-26T17:20:02.654Z"
+  }
+},
+{
+  "model": "bp.contact",
+  "pk": 10,
+  "fields": {
+    "name": "Paula",
+    "sender": "pau@presentes.cl",
+    "subject": "Borrando",
+    "message": "Aloha",
+    "cc_myself": true,
+    "sending_date": "2022-05-13T00:05:39.426Z"
+  }
+},
+{
+  "model": "bp.contact",
+  "pk": 11,
+  "fields": {
+    "name": "Tamara Neira",
+    "sender": "tam@presentes.cl",
+    "subject": "Sugerencia",
+    "message": "Me encantan su presentes! Quisiera que tuviesen uno relacionado al mar. Gracias!",
+    "cc_myself": true,
+    "sending_date": "2019-11-15T00:00:00Z"
+  }
+},
+{
+  "model": "bp.contact",
+  "pk": 12,
+  "fields": {
+    "name": "Paula Ramirez",
+    "sender": "pau@presentes.com",
+    "subject": "Felicitaciones",
+    "message": "Son lo más!",
+    "cc_myself": true,
+    "sending_date": "2020-07-16T00:00:00Z"
+  }
+},
+{
+  "model": "bp.contact",
+  "pk": 13,
+  "fields": {
+    "name": "Florencia Miralla",
+    "sender": "flo@presentes.com",
+    "subject": "Sugerencia",
+    "message": "Presentes al extranjero?",
+    "cc_myself": true,
+    "sending_date": "2020-08-20T00:00:00Z"
+  }
+},
+{
+  "model": "bp.contact",
+  "pk": 14,
+  "fields": {
+    "name": "Daniel Vargas",
+    "sender": "dany@presentes.com",
+    "subject": "Felicitaciones",
+    "message": "Sos un viaje!",
+    "cc_myself": true,
+    "sending_date": "2019-10-26T00:00:00Z"
+  }
+},
+{
+  "model": "bp.contact",
+  "pk": 15,
+  "fields": {
+    "name": "Amanel LaVida",
+    "sender": "ama@presentes.com",
+    "subject": "Felicitaciones",
+    "message": "Gracias!",
+    "cc_myself": true,
+    "sending_date": "2019-08-12T00:00:00Z"
+  }
+},
+{
+  "model": "bp.contact",
+  "pk": 16,
+  "fields": {
+    "name": "Ed Sheeran",
+    "sender": "ed@presentes.com",
+    "subject": "Sugerencia",
+    "message": "some unplug and disconnect getaway in the future??",
+    "cc_myself": true,
+    "sending_date": "2018-09-14T00:00:00Z"
+  }
+},
+{
+  "model": "bp.contact",
+  "pk": 17,
+  "fields": {
+    "name": "Vianny Vargas",
+    "sender": "vianny@presentes.com",
+    "subject": "Felicitaciones",
+    "message": "Recibí una de las experiencias más memorables de mi vida. Gracias!",
+    "cc_myself": true,
+    "sending_date": "2022-04-22T00:00:00Z"
+  }
+},
+{
+  "model": "bp.contact",
+  "pk": 18,
+  "fields": {
+    "name": "Aracely Guerrero",
+    "sender": "aracely@presentes.com",
+    "subject": "Sugerencia",
+    "message": "Me encantaría un retiro en silencio.",
+    "cc_myself": true,
+    "sending_date": "2022-05-04T00:00:00Z"
+  }
+},
+{
+  "model": "bp.contact",
+  "pk": 19,
+  "fields": {
+    "name": "Tamara Neira",
+    "sender": "tam@presentes.cl",
+    "subject": "Felicitaciones",
+    "message": "Muchas gracias por el taller Saboreando! Ahora soy toda una chef.",
+    "cc_myself": true,
+    "sending_date": "2020-11-15T00:00:00Z"
+  }
+},
+{
+  "model": "bp.contact",
+  "pk": 20,
+  "fields": {
+    "name": "Paula Ramirez",
+    "sender": "pau@presentes.com",
+    "subject": "Sugerencia",
+    "message": "Podrían hacer una actividad con baile?",
+    "cc_myself": true,
+    "sending_date": "2021-07-16T00:00:00Z"
+  }
+},
+{
+  "model": "bp.contact",
+  "pk": 21,
+  "fields": {
+    "name": "Florencia Miralla",
+    "sender": "flo@presentes.com",
+    "subject": "Consulta",
+    "message": "Puedo ceder mi presente a otra persona?",
+    "cc_myself": true,
+    "sending_date": "2021-08-20T00:00:00Z"
+  }
+},
+{
+  "model": "bp.contact",
+  "pk": 22,
+  "fields": {
+    "name": "Daniel Vargas",
+    "sender": "dany@presentes.com",
+    "subject": "Sugerencia",
+    "message": "Más viajes!",
+    "cc_myself": true,
+    "sending_date": "2020-10-26T00:00:00Z"
+  }
+},
+{
+  "model": "bp.contact",
+  "pk": 23,
+  "fields": {
+    "name": "Amanel LaVida",
+    "sender": "ama@presentes.com",
+    "subject": "Felicitaciones",
+    "message": "Excelente servicio y calidad de productos.",
+    "cc_myself": true,
+    "sending_date": "2020-08-12T00:00:00Z"
+  }
+},
+{
+  "model": "bp.contact",
+  "pk": 24,
+  "fields": {
+    "name": "Ed Sheeran",
+    "sender": "ed@presentes.com",
+    "subject": "Best experience ever",
+    "message": "Thanks mates",
+    "cc_myself": true,
+    "sending_date": "2021-09-14T00:00:00Z"
+  }
+},
+{
+  "model": "bp.contact",
+  "pk": 25,
+  "fields": {
+    "name": "Vianny Vargas",
+    "sender": "vianny@presentes.com",
+    "subject": "Sugerencia",
+    "message": "Me encantaría poder participar de una actividad en la selva amazónica.",
+    "cc_myself": true,
+    "sending_date": "2022-05-02T00:00:00Z"
+  }
+},
+{
+  "model": "bp.contact",
+  "pk": 26,
+  "fields": {
+    "name": "Aracely Guerrero",
+    "sender": "aracely@presentes.com",
+    "subject": "Consulta",
+    "message": "Puedo  llevar a mi mascota?",
+    "cc_myself": true,
+    "sending_date": "2022-04-04T00:00:00Z"
+  }
+},
+{
+  "model": "bp.contact",
+  "pk": 27,
+  "fields": {
+    "name": "Tamara Neira",
+    "sender": "tam@presentes.cl",
+    "subject": "Consulta",
+    "message": "Desde qué edad pueden participar los niños?",
+    "cc_myself": true,
+    "sending_date": "2020-08-15T00:00:00Z"
+  }
+},
+{
+  "model": "bp.contact",
+  "pk": 28,
+  "fields": {
+    "name": "Paula Ramirez",
+    "sender": "pau@presentes.com",
+    "subject": "Felicitaciones",
+    "message": "Los amo!",
+    "cc_myself": true,
+    "sending_date": "2021-07-11T00:00:00Z"
+  }
+},
+{
+  "model": "bp.contact",
+  "pk": 29,
+  "fields": {
+    "name": "Florencia Miralla",
+    "sender": "flo@presentes.com",
+    "subject": "100% Recomendado",
+    "message": "Son lo más!",
+    "cc_myself": true,
+    "sending_date": "2021-08-20T00:00:00Z"
+  }
+},
+{
+  "model": "bp.contact",
+  "pk": 30,
+  "fields": {
+    "name": "Daniel Vargas",
+    "sender": "dany@presentes.com",
+    "subject": "Consulta",
+    "message": "En cuánto tiempo debo agendar la fecha del presente?",
+    "cc_myself": true,
+    "sending_date": "2021-10-26T00:00:00Z"
+  }
+},
+{
+  "model": "bp.contact",
+  "pk": 31,
+  "fields": {
+    "name": "Amanel LaVida",
+    "sender": "ama@presentes.com",
+    "subject": "Consulta",
+    "message": "Dónde estás? En qué momento estás?",
+    "cc_myself": true,
+    "sending_date": "2020-11-12T00:00:00Z"
+  }
+},
+{
+  "model": "bp.contact",
+  "pk": 32,
+  "fields": {
+    "name": "Ed Sheeran",
+    "sender": "ed@presentes.com",
+    "subject": "Gracias",
+    "message": "Blessings!",
+    "cc_myself": true,
+    "sending_date": "2021-04-14T00:00:00Z"
+  }
+},
+{
+  "model": "bp.contact",
+  "pk": 33,
+  "fields": {
+    "name": "Vianny Vargas",
+    "sender": "vianny@presentes.com",
+    "subject": "Sugerencia",
+    "message": "actividades de danza trivial.",
+    "cc_myself": true,
+    "sending_date": "2022-04-29T00:00:00Z"
+  }
+},
+{
+  "model": "bp.contact",
+  "pk": 34,
+  "fields": {
+    "name": "Aracely Guerrero",
+    "sender": "aracely@presentes.com",
+    "subject": "Consulta",
+    "message": "Cuánto tiempo tengo para usar el presente?",
+    "cc_myself": true,
+    "sending_date": "2022-04-11T00:00:00Z"
+  }
+},
+{
+  "model": "bp.contact",
+  "pk": 35,
+  "fields": {
+    "name": "Marifer",
+    "sender": "mfvl.1186@gmail.com",
+    "subject": "Sugerencia",
+    "message": "Podrían crear encuentros virtuales durante la semana.",
+    "cc_myself": true,
+    "sending_date": "2022-05-10T09:23:13Z"
+  }
+},
+{
+  "model": "bp.contact",
+  "pk": 36,
+  "fields": {
+    "name": "Marifer",
+    "sender": "mfvl.1186@gmail.com",
+    "subject": "Sugerencia",
+    "message": "Reuniones face to face",
+    "cc_myself": true,
+    "sending_date": "2021-11-10T12:23:13Z"
+  }
+},
+{
+  "model": "bp.contact",
+  "pk": 37,
+  "fields": {
+    "name": "Marifer",
+    "sender": "mfvl.1186@gmail.com",
+    "subject": "Sugerencia",
+    "message": "En una sección mostrar el presente favorito del mes y hablar en detalle de ello. ",
+    "cc_myself": true,
+    "sending_date": "2019-05-11T13:23:23Z"
+  }
+},
+{
+  "model": "bp.contact",
+  "pk": 38,
+  "fields": {
+    "name": "Marifer",
+    "sender": "mfvl.1186@gmail.com",
+    "subject": "Sugerencia",
+    "message": "Videos demostrativos de los presentes",
+    "cc_myself": true,
+    "sending_date": "2021-08-10T23:23:13Z"
+  }
+},
+{
+  "model": "bp.contact",
+  "pk": 39,
+  "fields": {
+    "name": "Marifer",
+    "sender": "mfvl.1186@gmail.com",
+    "subject": "Sugerencia",
+    "message": "Showrooms demostrativos de sus presentes.",
+    "cc_myself": true,
+    "sending_date": "2022-03-20T12:23:13Z"
+  }
+},
+{
+  "model": "bp.contact",
+  "pk": 44,
+  "fields": {
+    "name": "Rosa",
+    "sender": "rlog.23@presentes.cl",
+    "subject": "Consulta",
+    "message": "Cuando pagan?",
+    "cc_myself": true,
+    "sending_date": "2022-05-13T18:13:18.189Z"
+  }
+},
+{
+  "model": "bp.contact",
+  "pk": 46,
+  "fields": {
+    "name": "Marifer",
+    "sender": "mfvl.1186@gmail.com",
+    "subject": "Probando email",
+    "message": "a vershh",
+    "cc_myself": true,
+    "sending_date": "2022-05-18T00:11:45.292Z"
+  }
+},
+{
+  "model": "bp.presents",
+  "pk": 1,
+  "fields": {
+    "name": "Disfrutando el Viaje",
+    "description": "Trekking grupal.\r  \t\t\tIncluye:\r  \tGuía turístico, Picnic,  Actividades de Atención Plena",
+    "features": null,
+    "price": "$ 22.000 CLP",
+    "guide_name": "Marifer",
+    "workshop_date": "2022-09-03T00:00:00Z",
+    "img_path": "images\\hiking.jpg"
+  }
+},
+{
+  "model": "bp.presents",
+  "pk": 2,
+  "fields": {
+    "name": "Viviendo el Presente",
+    "description": "Salto en Tandem.\r \t\t\tIncluye:\r \tTaller de Atención Plena,  Registro Audiovisual.",
+    "features": null,
+    "price": "$ 220.000 CLP",
+    "guide_name": "Marifer",
+    "workshop_date": "2022-10-29T00:00:00Z",
+    "img_path": "images\\tandem.jpg"
+  }
+},
+{
+  "model": "bp.presents",
+  "pk": 3,
+  "fields": {
+    "name": "La vida es un chiste",
+    "description": "Taller intensivo de Stand Up.   Aprende a disfrutar de todos los matices de tu vida. Incluye:  Clase con profesional del Humor,Presentación Final en Pub.",
+    "features": null,
+    "price": "$ 33.000 CLP",
+    "guide_name": "Marifer",
+    "workshop_date": "2022-11-11T00:00:00Z",
+    "img_path": "images\\standup.jpg"
+  }
+},
+{
+  "model": "bp.presents",
+  "pk": 4,
+  "fields": {
+    "name": "Conecta2",
+    "description": "Programa para encontrar a tu compañer@ de camino, Programa de acompañamiento, Conexión con 3 perfiles idóneos,  Evento Final de Re-unión.",
+    "features": null,
+    "price": "$ 220.000 CLP",
+    "guide_name": "Marifer",
+    "workshop_date": "2022-06-06T00:00:00Z",
+    "img_path": "images\\soul-mates.jpg"
+  }
+},
+{
+  "model": "bp.presents",
+  "pk": 5,
+  "fields": {
+    "name": "Saboreando",
+    "description": "Taller de cocina para ti y un amig@ o pareja.\r \r Incluye: Clase y degustación para 2 personas, Ingredientes y utencilios.",
+    "features": "null",
+    "price": "$ 44.000 CLP",
+    "guide_name": "Marifer",
+    "workshop_date": "2023-02-03T00:00:00Z",
+    "img_path": "images\\cooking-thebox-625x408.jpg"
+  }
+},
+{
+  "model": "bp.post",
+  "pk": 11,
+  "fields": {
+    "author": [
+      "Marifer"
+    ],
+    "title": "Soy Yo",
+    "text": "\"Me caí, me paré, caminé, me subí , me fui contra la corriente y también me perdí, fracasé, me encontré, lo viví y aprendí. Cuando te pegas fuerte más profundo es el beat.  Sigo bailando y escribiendo mis letras. Sigo cantando con las puertas abiertas, atravesando todas estas tierras Y no hay que viajar tanto pa' encontrar la respuesta.  Y no te preocupes si no te aprueban Cuando te critiquen, tú solo di Soy yo\"                                                     by Bomba Estereo",
+    "created_date": "2019-11-13T00:00:00Z",
+    "published_date": "2019-11-13T00:00:00Z"
+  }
+},
+{
+  "model": "bp.post",
+  "pk": 13,
+  "fields": {
+    "author": [
+      "Pau"
+    ],
+    "title": "No se Rompe",
+    "text": "\"No todo lo que brilla es oro ni cobre No hay pena que dure ni día que sobre Puede que duela mucho con o sin razones Por más que te digan que sí El corazón no se rompe El corazón no se rompe A mí, del susto No me van a matar El año pasado decían que el mundo entero, enterito Se iba a acabar Alguna vez juré Morirme por ella Y aquí me tienen bailando Dejando huella\"                                                  by  Álex Ferreira",
+    "created_date": "2020-04-13T00:00:00Z",
+    "published_date": "2020-04-13T00:00:00Z"
+  }
+},
+{
+  "model": "bp.post",
+  "pk": 14,
+  "fields": {
+    "author": [
+      "Teddy"
+    ],
+    "title": "Say",
+    "text": "\"Have no fear for giving in Have no fear for giving over You better know that in the end It's better to say too much Than never to say what you need to say again Even if your hands are shaking And your faith is broken Even as the eyes are closing Do it with a heart wide open, a wide heart\"                                                           by John Mayer",
+    "created_date": "2020-04-13T00:00:00Z",
+    "published_date": "2020-04-13T00:00:00Z"
+  }
+},
+{
+  "model": "bp.post",
+  "pk": 15,
+  "fields": {
+    "author": [
+      "Pau"
+    ],
+    "title": "Upekkha",
+    "text": "\"Mucho ruido en mi, mucho ruido en vos, mucho ruido en a ciudad. Jugamos al sí,  jugamos al no y un disfraz ya es natural.\"                                              by Marete Sonrisa",
+    "created_date": "2020-04-13T00:00:00Z",
+    "published_date": "2020-04-13T00:00:00Z"
+  }
+},
+{
+  "model": "bp.post",
+  "pk": 17,
+  "fields": {
+    "author": [
+      "Flo"
+    ],
+    "title": "Tu Valor",
+    "text": "\"Estás tan lejos del lugar donde quedo tu corazón Y pasas tanto tiempo preguntándote la razón La razón Uhhh uhhh uhhh Si hay tantas cosas que desviarte de tu dirección Quizás habría que dejar de pretender el control Suelta tu temor Deja que la vida muestre su dolor Nada bueno queda si no ves tu valor Tu valor\"                                            by Benjamín Walker",
+    "created_date": "2021-11-11T00:00:00Z",
+    "published_date": "2021-11-11T00:00:00Z"
+  }
+},
+{
+  "model": "bp.post",
+  "pk": 18,
+  "fields": {
+    "author": [
+      "Pau"
+    ],
+    "title": "Duelo",
+    "text": "Sin dolor no te haces feliz \r Sin dolor no te haces feliz\r   Sin amor\r Tiernamente\r                                                       by La Ley",
+    "created_date": "2019-11-10T00:00:00Z",
+    "published_date": "2019-11-10T00:00:00Z"
+  }
+},
+{
+  "model": "bp.post",
+  "pk": 19,
+  "fields": {
+    "author": [
+      "Tam"
+    ],
+    "title": "Vive",
+    "text": "\"Hasta que el presente sea la respuesta revelada\r Así es que de repente todas las preguntas van dejando de importar,\r Entonces te digo\r \r Vive el presente, sencillamente,\r dejá que el tiempo vaya haciendo su proceso.\r Vive el presente, sencillamente\r Deja al encuentro resolver todo este enigma comunicacional.\r \"                                                        by Ivonne Guzman",
+    "created_date": "2020-08-24T00:00:00Z",
+    "published_date": "2020-08-24T00:00:00Z"
+  }
+},
+{
+  "model": "bp.post",
+  "pk": 20,
+  "fields": {
+    "author": [
+      "Ara"
+    ],
+    "title": "Alma",
+    "text": "\"Pero me lancé, me atreví a nadar \r Y estoy en medio de la hermosa soledad \r Para conectarme con el alma \r Voy entregarme a esta noche sin escapar \r Voy a invitar a mi soledad \r Y sentir el corazón...hoy\r. \r Yo decidí acurrucar este dolor\r Para conectarme con el alma Y abrazar mi inmensa soledad\"                                                   \r \r by Javiera Mena",
+    "created_date": "2022-04-26T00:00:00Z",
+    "published_date": "2022-04-26T00:00:00Z"
+  }
+},
+{
+  "model": "bp.salesorder",
+  "pk": 11000,
+  "fields": {
+    "customer": [
+      "Flo"
+    ],
+    "order_date": "2022-03-12T00:00:00Z",
+    "receiver_email": "sara@presentes.com"
+  }
+},
+{
+  "model": "bp.salesorder",
+  "pk": 11001,
+  "fields": {
+    "customer": [
+      "Dany"
+    ],
+    "order_date": "2022-02-21T00:00:00Z",
+    "receiver_email": "pedro@presentes.com"
+  }
+},
+{
+  "model": "bp.salesorder",
+  "pk": 11002,
+  "fields": {
+    "customer": [
+      "Teddy"
+    ],
+    "order_date": "2022-01-08T00:00:00Z",
+    "receiver_email": "victoria@presentes.com"
+  }
+},
+{
+  "model": "bp.orderdetail",
+  "pk": 110000,
+  "fields": {
+    "order": 11001,
+    "present": 1
+  }
+},
+{
+  "model": "bp.orderdetail",
+  "pk": 110001,
+  "fields": {
+    "order": 11000,
+    "present": 5
+  }
+},
+{
+  "model": "bp.orderdetail",
+  "pk": 110002,
+  "fields": {
+    "order": 11002,
+    "present": 3
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2022-05-11T22:55:15.626Z",
+    "user": [
+      "Marifer"
+    ],
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "object_id": "1",
+    "object_repr": "Público",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2022-05-11T23:04:09.694Z",
+    "user": [
+      "Marifer"
+    ],
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "object_id": "2",
+    "object_repr": "Team",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2022-05-11T23:31:02.701Z",
+    "user": [
+      "Marifer"
+    ],
+    "content_type": [
+      "bp",
+      "post"
+    ],
+    "object_id": "20",
+    "object_repr": "Alma",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Text\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2022-05-17T01:17:48.563Z",
+    "user": [
+      "Marifer"
+    ],
+    "content_type": [
+      "bp",
+      "presents"
+    ],
+    "object_id": "5",
+    "object_repr": "Saboreando",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\", \"Features\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2022-05-17T03:49:15.465Z",
+    "user": [
+      "Marifer"
+    ],
+    "content_type": [
+      "bp",
+      "presents"
+    ],
+    "object_id": "5",
+    "object_repr": "Saboreando",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\", \"Features\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2022-05-17T03:49:49.016Z",
+    "user": [
+      "Marifer"
+    ],
+    "content_type": [
+      "bp",
+      "presents"
+    ],
+    "object_id": "5",
+    "object_repr": "Saboreando",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+}
+]

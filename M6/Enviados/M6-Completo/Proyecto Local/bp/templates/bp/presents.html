@@ -15,24 +15,24 @@
                 <div class="row g-5">
                     {% for present in presents %}
                     <div id="enjoy" class="col-lg-4 wow slideInUp" data-wow-delay="0.3s"  style="display: flex; flex-direction: row; flex-wrap: wrap">        
-                            <div class="services-item bg-light rounded overflow-hidden">
-                                <div class="services-img position-relative overflow-hidden">
-                                    <img class="img-fluid" src="{% static present.img_path %}" alt="Present_Img">
-                                    <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4"
-                                        href="">{{ present.price}}</a>
+                        <div class="services-item bg-light rounded overflow-hidden">
+                            <div class="services-img position-relative overflow-hidden">
+                                <img class="img-fluid" src="{% static present.img_path %}" alt="Present_Img">
+                                <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4"
+                                    href="">{{ present.price}}</a>
+                            </div>
+                            <div class="p-4">
+                                <div class="d-flex mb-3">
+                                    <small class="me-3"><i class="far fa-user text-primary me-2"></i>{{ present.guide_name}}</small>
+                                    <i class="far fa-calendar-alt text-primary me-2"></i><p style="font-size:68%;">{{ present.workshop_date}}</p></small>
                                 </div>
-                                <div class="p-4">
-                                    <div class="d-flex mb-3">
-                                        <small class="me-3"><i class="far fa-user text-primary me-2"></i>{{ present.guide_name}}</small>
-                                        <i class="far fa-calendar-alt text-primary me-2"></i><p style="font-size:68%;">{{ present.workshop_date}}</p></small>
-                                    </div>
-                                    <h4 class="mb-3">{{ present.name}}</h4>
-                                    <p>{{ present.description}}</p>
-                                    <button type="submit" class="btn btn-primary btn-lg">Comprar</button>
-                                </div>
-                            </div>                        
+                                <h4 class="mb-3">{{ present.name}}</h4>
+                                <p>{{ present.description}}</p>
+                                <button type="submit" class="btn btn-primary btn-lg">Comprar</button>
+                            </div>
+                        </div>                        
                     </div>
-                    {% endfor %}
+                    {% endfor %}                    
                 </div>
             </div>
         </div>
