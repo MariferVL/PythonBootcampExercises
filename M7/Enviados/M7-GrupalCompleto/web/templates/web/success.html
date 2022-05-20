@@ -1,0 +1,30 @@
+{% extends 'base-main.html' %}
+{% load static %}
+
+
+<title>{% block title %}Mensaje recibido{% endblock %}</title>
+
+
+{% block content %}
+
+
+    <div class="container">
+        <div class="row">
+            <br><br>
+            <div class="col card s12 m8 offset-m2 center">
+                <h3 class="green-text">Mensaje Recibido Exitosamente</h3>
+                <p class="flow-text">Un integrante de nuestra área de atención responderá a tu solicitud lo más pronto posible</p>
+                <p class="flow-text">¡Gracias por contactarnos!</p>
+                <br><br>
+                <a class="waves-effect waves-light btn green darken-3" href="{% url 'message_list' %}">
+                    Comentarios
+                    <i class="material-icons left">comment</i>
+                </a>
+                <br><br>             
+            </div>
+        </div>
+    </div>
+
+
+    
+{% endblock %}

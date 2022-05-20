@@ -1,0 +1,166 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %} Hello World {% endblock title %}</title>
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <script src="https://kit.fontawesome.com/28c32cad30.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="{% static '/web/css/style-base.css' %}">
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+    <style>
+
+    </style>
+
+</head>
+<body class="grey lighten-3">
+  
+
+
+  <div class="bar_log purple darken-4">
+    {% if user.is_authenticated %}
+    
+    <div class="log">
+      <span class="pink-text text-accent-1">
+      Hola {{user.first_name}} {{user.last_name}} !
+      </span>
+    </div>
+    <div class="log">
+      <a class="pink-text text-accent-1" href="{% url 'my_messages' %}">mis comentarios</a>
+      <a class="teal-text text-accent-4" href="{% url 'logout' %}">logout</a>
+    </div>
+
+    {% else %}
+    
+    <div class="log">
+    </div>  
+    <div class="log">
+      <a class="teal-text text-accent-4" href="{% url 'register_user' %}">register</a>
+      <a class="teal-text text-accent-4" href="{% url 'login' %}">login</a>
+    </div>  
+    
+    {% endif %}
+  
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+
+  <nav>
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="../" class="brand-logo">
+          <img class="logo-me" src="{% static '/web/img/logo-white.svg' %}" alt="appoo">
+          <!-- <img class="logo-me" src="{% static '/img/logo-white.png' %}" alt="My image"> -->
+        </a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+          <i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li {% if nbar == 'home' %} class="active" {% endif %}><a href="{% url 'home' %}">Inicio</a></li>
+          <li {% if nbar == 'escala' %} class="active" {% endif %}><a href="{% url 'escala' %}">Escala bristol</a></li>
+          <li {% if nbar == 'recomendaciones' %} class="active" {% endif %}><a href="{% url 'recomendaciones' %}">Recomendaciones</a></li>
+          <li {% if nbar == 'blog' %} class="active" {% endif %}><a href="{% url 'blog' %}">Blog</a></li>
+          <li {% if nbar == 'enlaces' %} class="active" {% endif %}><a href="{% url 'enlaces' %}">Links</a></li>
+          <li {% if nbar == 'fotos' %} class="active" {% endif %}><a href="{% url 'fotos' %}">Galería de Fotos</a></li>
+          <li {% if nbar == 'contacto' %} class="active" {% endif %}><a href="{% url 'contact' %}">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <ul class="sidenav teal lighten-5" id="mobile-demo">
+    <li {% if nbar == 'home' %} class="active" {% endif %}><a href="{% url 'home'%}">Inicio</a></li>
+    <li {% if nbar == 'escala' %} class="active" {% endif %}><a href="{% url 'escala'%}">Escala Bristol</a></li>
+    <li {% if nbar == 'recomendaciones' %} class="active" {% endif %}><a href="{% url 'recomendaciones'%}">Recomendaciones</a></li>
+    <li {% if nbar == 'blog' %} class="active" {% endif %}><a href="{% url 'blog'%}">Blog</a></li>
+    <li {% if nbar == 'enlaces' %} class="active" {% endif %}><a href="{% url 'enlaces'%}">Links</a></li>
+    <li {% if nbar == 'fotos' %} class="active" {% endif %}><a href="{% url 'fotos'%}">Galería de Fotos</a></li>
+    <li {% if nbar == 'contacto' %} class="active" {% endif %}><a href="{% url 'contact'%}">Contacto</a></li>
+    <li><a class="grey-text text-lighten-3" href="{% url 'message_list'%}">Comentarios</a></li>
+  </ul>
+
+  {% block content %}contenido{% endblock content %}
+
+  <footer class="page-footer purple darken-4">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h6 class="white-text">Esta app online escanea tus heces y gracias a la IA sabe más sobre tu salud</h6>
+          <p class="grey-text text-lighten-4">La dieta que tenemos afectará decisivamente nuestra salud y desarrollo. Con la app de Moxie podremos aprender sobre ella.</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Enlaces</h5>
+          <ul>            
+            <li {% if nbar == 'home' %} class="active" {% endif %}><a class="grey-text text-lighten-3" href="{% url 'home'%}">home</a></li>
+            <li {% if nbar == 'escala' %} class="active" {% endif %}><a class="grey-text text-lighten-3" href="{% url 'escala'%}">escala bristol</a></li>
+            <li {% if nbar == 'recomendaciones' %} class="active" {% endif %}><a class="grey-text text-lighten-3" href="{% url 'recomendaciones'%}">recomendaciones</a></li>
+            <li {% if nbar == 'blog' %} class="active" {% endif %}><a class="grey-text text-lighten-3" href="{% url 'blog'%}">blog</a></li>
+            <li {% if nbar == 'enlaces' %} class="active" {% endif %}><a class="grey-text text-lighten-3" href="{% url 'enlaces'%}">links</a></li>
+            <li {% if nbar == 'fotos' %} class="active" {% endif %}><a class="grey-text text-lighten-3" href="{% url 'fotos'%}">galería de fotos</a></li>
+            <li {% if nbar == 'contacto' %} class="active" {% endif %}><a class="grey-text text-lighten-3" href="{% url 'contact'%}">Contácto</a></li>
+            <li><a class="grey-text text-lighten-3" href="{% url 'message_list'%}">Comentarios</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      © 2022 Appoo
+      <a class="grey-text text-lighten-4 right" href="{%url 'admin'%}">admin</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems);
+
+    var elems = document.querySelectorAll('.carousel');
+    var instances = M.Carousel.init(elems);
+
+    var elems = document.querySelectorAll('.parallax');
+    var instances = M.Parallax.init(elems);
+
+    var elems = document.querySelectorAll('.slider');
+    var instances = M.Slider.init(elems);
+
+    var elems = document.querySelectorAll('.collapsible');
+    var instances = M.Collapsible.init(elems);
+
+    var elems = document.querySelectorAll('.materialboxed');
+    var instances = M.Materialbox.init(elems);
+
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems);
+
+
+  });
+  </script>
+
+</body>
+</html>

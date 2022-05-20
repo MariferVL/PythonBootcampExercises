@@ -1,0 +1,66 @@
+{
+    "results": [
+        {
+            "gender": "female",
+            "name": {
+                "title": "Mrs",
+                "first": "Hilla",
+                "last": "Mikkola"
+            },
+            "location": {
+                "street": {
+                    "number": 9716,
+                    "name": "Pyynikintie"
+                },
+                "city": "Teuva",
+                "state": "Central Finland",
+                "country": "Finland",
+                "postcode": 48488,
+                "coordinates": {
+                    "latitude": "-12.5691",
+                    "longitude": "10.3149"
+                },
+                "timezone": {
+                    "offset": "-7:00",
+                    "description": "Mountain Time (US & Canada)"
+                }
+            },
+            "email": "hilla.mikkola@example.com",
+            "login": {
+                "uuid": "49a2fad0-6079-4e1e-a560-d2e0577798c1",
+                "username": "angryswan240",
+                "password": "halflife",
+                "salt": "aDL4e3ku",
+                "md5": "72cfeec0c16224c3d8497935f43ed7de",
+                "sha1": "7611e6b280413e28deedc068dc146e8a33c20848",
+                "sha256": "32df1b0d1bea9ce28c4641de222ff4553b31adfb6091c874bb37c51efe3bac0b"
+            },
+            "dob": {
+                "date": "1995-03-11T16:07:51.392Z",
+                "age": 27
+            },
+            "registered": {
+                "date": "2003-01-27T20:55:28.791Z",
+                "age": 19
+            },
+            "phone": "05-445-570",
+            "cell": "049-404-41-55",
+            "id": {
+                "name": "HETU",
+                "value": "NaNNA156undefined"
+            },
+            "picture": {
+                "large": "https://randomuser.me/api/portraits/women/32.jpg",
+                "medium": "https://randomuser.me/api/portraits/med/women/32.jpg",
+                "thumbnail": "https://randomuser.me/api/portraits/thumb/women/32.jpg"
+            },
+            "nat": "FI"
+        }
+    ],
+    "info": {
+        "seed": "7f0bbd8746d92a75",
+        "results": 1,
+        "page": 1,
+        "version": "1.3"
+    }
+}

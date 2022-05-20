@@ -1,0 +1,118 @@
+.logo-me{
+	height: 2.6rem;
+	margin-top: 1rem;
+	/*border: 1px solid #d00;*/
+}
+
+
+.bar_log {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 10px;
+	/*border: 1px solid #0ff;*/
+
+}
+
+.bar_log .log{
+	/*border: 3px solid #000;*/
+	position: relative;
+	color: #f60284;
+
+}
+
+.bar_log .log a{
+	margin: 0 10px;
+	/*border: 3px solid #000;*/
+	color: #0aefe7;
+}
+
+
+
+nav a{
+	text-transform: capitalize;
+}
+
+
+
+
+.joke{
+	z-index: 12000;
+	min-height: 200px;
+	width: 200px;
+	margin: 30px;
+	padding: 20px;
+	border: 1px solid #000;
+	border-radius: 10px;
+	box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
+	background: rgba(255,255,255,0.3);
+}
+
+.joke h2{
+	margin-top: 0;
+}
+
+
+.card-me{
+	position: relative;
+	display: block;
+	
+	left: 50%;
+	margin-left: -250px;
+	width: 500px;
+
+	padding: 20px;
+	border-radius: 10px;
+	background: rgba(255,255,255,0.8);
+	color: #f07;
+}
+
+.air1{
+	margin-top: 100px !important;
+	margin-bottom: 100px !important;
+	padding: 20px !important;
+}
+
+.card-me .txt1{
+	font-size: 120%;
+	font-weight: bold;
+	
+}
+
+.card1{margin-top: 50px; left: 50%; margin-left: -400px; width: 500px;}
+.card2{margin-top: 80px; left: 50%; margin-left: -400px; width: 500px;}
+.card3{margin-top: 120px; left: 50%; margin-left: -300px; width: 500px;}
+.card4{margin-top: 120px; left: 50%; margin-left: -300px; width: 500px;}
+.card5{margin-top: 160px; left: 50%; margin-left: -200px; width: 500px;}
+.card6{margin-top: 200px; left: 50%; margin-left: -200px; width: 500px;}
+
+
+@media (max-width: 768px) {
+
+	.card1, .card2, .card3, .card4, .card5, .card6{
+		left: 0;
+		margin-left: auto;
+		margin-right: auto;
+		width: 80%;
+		box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
+	}
+
+	.card1{margin-top: 50px;}
+	.card2{margin-top: 60px;}
+	.card3{margin-top: 70px;}
+	.card4{margin-top: 80px;}
+	.card5{margin-top: 100px;}
+	.card6{margin-top: 120px;}
+	
+}
+
+.inline-icon {
+    vertical-align: bottom;
+    font-size: 140% !important;
+}
+
+.custom-checkbox[type="checkbox"]:checked + span:not(.lever)::before {
+	border: 2px solid transparent;
+	border-bottom: 2px solid #4caf50;
+	border-right: 2px solid #4caf50;
+	background: transparent;
+}

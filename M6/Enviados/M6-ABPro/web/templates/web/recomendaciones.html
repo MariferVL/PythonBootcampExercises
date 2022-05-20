@@ -1,0 +1,23 @@
+{% extends 'base-main.html' %}
+{% load static %}
+
+{% block title %}Recomendaciones{% endblock title %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        
+        <h1 class="center">Recomendaciones</h1>
+        {% for item in query_tips %}
+        <div class="card blue lighten-4 col s12 m8 offset-m2 section">
+            <h4>
+                <i class="{{ item.icon }}"></i>
+                {{ item.title }}</h4>
+            <p>{{ item.text }}</p>
+        </div>  
+        {% endfor %}
+      
+    </div>
+</div>
+
+{% endblock %}

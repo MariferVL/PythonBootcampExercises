@@ -1,0 +1,18 @@
+{% extends 'base-main.html' %}
+{% load static %}
+
+{% block title %}Galería{% endblock title %}
+
+{% block content %}
+<div class="parallax-container">
+    <div class="joke">
+        <h2>{{ query_photos.title }}</h2>
+        <p>{{ query_photos.text }}</p>
+    </div>
+
+    <div class="parallax">
+        <img src="{{ query_photos.photo }}">
+    </div>
+</div>
+
+{% endblock %}

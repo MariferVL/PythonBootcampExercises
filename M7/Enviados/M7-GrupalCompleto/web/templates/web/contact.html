@@ -1,0 +1,71 @@
+{% extends 'base-main.html' %}
+
+<title>{% block title %}Contacto - Comprando Presentes{% endblock %}</title>
+
+
+{% block content %}
+
+
+<div class="container" id="contact">
+    <div class="row">
+        <div class="col s12 m6">
+            <h2>Contáctanos</h2>
+            <p>Disponemos de diferentes plataformas para aclarar tus dudas o saber de ti.</p>
+
+            <p>
+                <i class="inline-icon material-icons">local_phone</i>
+                <strong>Llámanos — </strong>
+                <span>+56 9 903 03 456</span>
+            </p>
+            <p>
+                <i class="inline-icon material-icons">email</i>
+                <strong>Correo electrónico — </strong>
+                <span>hagacaquita@appoo.cl</span>
+            </p>
+        </div>
+        <div class="col s12 m6">
+
+            <form method="post"> {% csrf_token %}
+
+                    <div class="input-field col s12">
+                        <input type="text" class="" id="id_name" name="name" required>
+                        <label for="id_name">Nombre</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input type="email" class="" id="id_sender" name="sender" required>
+                        <label for="id_sender">Email</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input type="text" class="" id="id_subject" name="subject" required>
+                        <label for="id_subject">Asunto</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <textarea class="form-control materialize-textarea" rows="4" name="message" id="id_message" required></textarea>
+                        <label for="id_message">Mensaje</label>
+                    </div>
+                    <div class="col s12">
+                        <label>
+                            <input type="checkbox" class="filled-out custom-checkbox" checked="checked" name="cc_myself" id="id_cc_myself"/>
+                            <span>Deseo una copia</span>
+                            <br/><br/> <hr/> <br/>
+                        </label> 
+                    </div>
+                    <div class="col s12">
+                        <button class="waves-effect waves-light btn green" type="submit">Enviar
+                            <i class="inline-icon material-icons right">send</i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+</div>
+
+
+
+
+<!-- Contact End -->
+
+{% endblock %}

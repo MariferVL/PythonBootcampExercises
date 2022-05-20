@@ -1,0 +1,35 @@
+{% extends 'base-main.html' %}
+
+<title>{% block title %}Comentario - Comprando Presentes{% endblock %}</title>
+
+
+{% block content %}
+
+
+<div class="container">
+    <div class="row">
+
+        <br><br>
+
+        <div class="col s12 card">
+            <h4>Comentario</h4>
+            {% if message.sending_date %}
+            <p class="grey-text">
+                {{ message.sending_date }}
+            </p>{% endif %}
+    
+            <p class="grey-text">{{ message.name }} / {{ message.sender }}</p>
+            <p class="flow-text">{{ message.message|linebreaksbr }}</p>
+
+            {% if user.is_authenticated %}                            
+            <a class="btn red" method="POST" href="{% url 'message_remove' pk=message.pk %}">Eliminar
+                <i class="inline-icon material-icons">delete_forever</i>
+            </a>               
+            {% endif %}
+            <br><br>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

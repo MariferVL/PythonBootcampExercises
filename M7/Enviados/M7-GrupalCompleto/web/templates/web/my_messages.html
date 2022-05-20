@@ -1,0 +1,54 @@
+{% extends 'base-main.html' %}
+{% load static %}
+
+<title>{% block title %}Mis Comentarios-Comprando Presentes{% endblock %}</title>
+
+{% block content %}
+
+
+<div class="container">
+    <div class="row">
+
+        <br><br>
+
+        <div class="col s12 m10 offset-m1 blue lighten-3">
+            <h3 class="center">Todos tus comentarios</h3>
+
+            {% for my_message in my_messages %}
+            <div class="col s12 m10 offset-m1 card">                    
+                {% if my_message.sending_date %}
+                <p id="published" class="grey-text">{{ my_message.sending_date }}</p>
+                {% endif %}
+                <p>{{my_message.message}}</p>
+                <p>
+                    <a href={% url 'message_detail' pk=my_message.pk %}>
+                        <i class="material-icons">edit</i>
+                        editar
+                    </a> |
+                   <span>{{my_message.name}}</span> |
+                   <span>{{my_message.sender}}</span>
+
+
+                <p>
+                    {{my_messages.message}}
+                </p>
+
+            </div> 
+            {% endfor %}  
+
+
+        </div>
+
+
+
+
+
+    </div>
+</div>
+
+
+
+
+
+{% endblock %}
+

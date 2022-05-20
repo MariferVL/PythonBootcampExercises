@@ -1,0 +1,32 @@
+{% extends 'base-main.html' %}
+
+{% block content %}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col s12 m7">
+
+            {% if form.errors %}
+            {% comment %} <p>There was an error with your form...</p> {% endcomment %}
+            
+                <div class="card-content red-text">
+                    {{ form.errors }}
+                </div>
+
+            {% endif %}
+
+            <h2>Register</h2>
+            <form action="{% url 'register_user' %}" method="POST" class="post-form">
+            {% csrf_token %}
+            {{ form.as_p }}
+            {% comment %} <form> {% endcomment %}
+
+                <button type="submit" class="save btn btn-default green">Save</button>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

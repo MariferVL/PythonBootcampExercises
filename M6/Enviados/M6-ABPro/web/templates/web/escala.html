@@ -1,0 +1,38 @@
+{% extends 'base-main.html' %}
+{% load static %}
+
+{% block title %}Escala de Bristol{% endblock title %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <h1 class="col s12 center">Escala de Bristol</h1>
+
+        <div class="col s12 white card">
+            <table class="highlight centered responsive-table">
+                <thead>
+                <tr>
+                    <th>imagen</th>
+                    <th>tipo</th>
+                    <th>descripción</th>
+                    <th>consejo</th>
+                </tr>
+                </thead>
+        
+                <tbody>
+                    <tr>
+                    {% for item in query_scale %}
+                    
+                        <td><img width="100px" src="{{ item.photo }}"/></td>
+                        <td>{{ item.typesb }}</td>
+                        <td>{{ item.text }}</td>
+                        <td>{{ item.cause }}</td>
+                    </tr>        
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>  
+    </div>
+</div>
+
+{% endblock %}

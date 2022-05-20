@@ -1,0 +1,37 @@
+{% extends 'base-main.html' %}
+{% load static %}
+
+<title>{% block title %}Comentarios-Comprando Presentes{% endblock %}</title>
+
+{% block content %}
+
+    <div class="container">
+        <div class="row">
+            <br><br>
+            <div class="col s12 blue lighten-3">
+                <h3>Comentarios</h3>
+                <p>Consultas y sugerencias dejadas por nuestra comunidad</p>
+
+                {% for message in messages %}
+
+                    <div class="col s12 m4 card">
+                        {% comment %}
+                        
+                        {% endcomment %}
+                        <p>{{message.message}}</p>
+                        <p class="grey-text"> <strong>{{message.name}}</strong></p>
+                        <p class="grey-text">{{message.sender}}</p>
+                    
+                        
+                    </div>
+
+                {% endfor %} 
+
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock %}
+

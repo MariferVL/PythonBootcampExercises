@@ -1,0 +1,21 @@
+{% extends 'base-main.html' %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+
+        <div class="col air1 s12 m7">
+            <h2>Login</h2>
+            <form method="POST" class="post-form">
+            {% csrf_token %}
+            {% comment %} <form> {% endcomment %}
+                <input placeholder="nombre de usuario" type="text" name="username">
+                <input placeholder="password" type="password" name="password">
+                <button type="submit" class="green save btn btn-default">Entrar</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

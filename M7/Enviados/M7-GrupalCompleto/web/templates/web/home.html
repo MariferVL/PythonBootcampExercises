@@ -1,0 +1,32 @@
+{% extends 'base-main.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+
+    <div class="parallax-container">
+        <div class="parallax"><img src="{{ query_funfacts.photo }}"></div>
+        
+
+        <div class="card-me">
+            <p class="txt1">
+                {{ query_funfacts.title }}
+            </p>
+            <p class="txt2">
+                {{ query_funfacts.text }}
+            </p>
+        </div>
+
+
+    </div>
+
+
+    <script>
+        const card = [ 'card1', 'card2', 'card3', 'card4', 'card5', 'card6'];
+        document.querySelector('.card-me').classList.add(card[Math.floor(Math.random() * card.length)]);
+    </script>
+
+
+
+{% endblock %}
