@@ -107,9 +107,9 @@ El proyecto cuenta con 3 secciones principales que son de libre accceso al públ
   </ul>
   </details>
   <div align="center">
-  <img src="/bp/static/images/presents.png " width="600px" height="400px">
+  <img src="bp/static/images/presents.png " width="600px" height="400px">
 
-  <img src="/bp/static/images/servicesEx.png" width="600px" height="400px">
+  <img src="bp/static/images/servicesEx.png" width="600px" height="400px">
 </div>
 <br />
 <details>
