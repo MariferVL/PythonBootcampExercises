@@ -3,3 +3,5 @@ Django
 sqlparse
 tzdata
 mysqlclient
+pytz
+virtualenv
