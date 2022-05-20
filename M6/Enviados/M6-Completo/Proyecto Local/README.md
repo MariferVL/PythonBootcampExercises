@@ -7,7 +7,7 @@
 
 <h1 align="center"><b>Proyecto Django</b></h1>
 <h2 align="center">Módulo 6</h2>
-<img src="/bp/static/images/favicon-96x96.png" alt="Logo" width="110px" height="110px">
+<img src="bp/static/images/favicon-96x96.png" alt="Logo" width="110px" height="110px">
 
 
 
